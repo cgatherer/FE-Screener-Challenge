@@ -1,7 +1,7 @@
 {
-  "name": "hibbert_framework",
-  "version": "2.0.1",
-  "description": "Hibbert Sass based HTML frontend framework",
+  "name": "FE Screener Challenge",
+  "version": "1.0.1",
+  "description": "The purpose of this exercise will be for you to take a sample open API and use the data provided in a fairly basic Javascript web application to demonstrate your front-end development skills.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -33,6 +33,6 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
     "merge-stream": "^1.0.1",
-    "titatoggle": "^2.1.2"
+    "sass-rem": "^2.0.1"
   }
 }
