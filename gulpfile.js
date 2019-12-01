@@ -12,9 +12,7 @@ const paths = {
     src: './scss/style.scss',
     dest: './css',
     watch: './scss/**/*.scss',
-    animate: './node_modules/animate.css/animate.min.css',
-    titatoggle: './node_modules/titatoggle/scss/titatoggle.scss'
-    // bootstrap: './node_modules/bootstrap/scss/bootstrap.scss'
+    bootstrap: './node_modules/bootstrap/scss/bootstrap.scss'
   },
   js: {
     bootstrap: './node_modules/bootstrap/dist/js/bootstrap.min.js',
