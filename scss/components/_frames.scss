@@ -1,0 +1,58 @@
+//
+// Frames class
+//
+
+.frame {
+    position: relative;
+    transition: all 500ms;
+    min-height: 100vh;
+    height: auto;
+    padding-top: 60px;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+    @include clearfix;
+    @include media-breakpoint-down(md) {
+        max-height: none;
+        padding-top: 0;
+        @include clearfix;
+    }
+}
+    
+.short-frame {
+    position: relative;
+    transition: all 500ms;
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+    @include clearfix;
+    @include media-breakpoint-down(lg) {
+        max-height: none;
+        padding-top: 0;
+        @include clearfix;
+    }
+}
+    
+.frame-1 {
+    background-image: url("../img/frame.jpg");
+    background-color: $primary-color;
+    @extend .frame;
+    
+    h1, h2, a {
+        color: $white;
+        @include text-shadow;
+    }
+    
+    &:hover {
+        color: $button-blue;
+    }
+}

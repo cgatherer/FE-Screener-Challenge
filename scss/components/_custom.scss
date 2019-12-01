@@ -1,0 +1,461 @@
+//**
+// Useful Reusable Styles
+//**
+
+html {
+    min-height: 100%;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+.bg-tile {
+    background: #fff;
+    background: url("../img/bg-tile.png");
+    background-repeat: repeat;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.home-bg {
+    background-color: #000000 !important;
+    background: url("../img/home-bg.jpg");
+    background-repeat: no-repeat;
+    display: cover;
+    background-size: 100% auto;
+    background-position: center bottom;
+    overflow-x: hidden;
+    @include media-breakpoint-down(lg) {
+        overflow-x: hidden;
+    }
+}
+
+.footer-landing {
+    width: 100vw;
+    text-align: center;
+    color: $grey;
+    text-shadow: 1px 1px 1px #000000;
+    padding: 50px 0 20px 0;
+    line-height: 1.25em;
+    font-size: .8em;
+    z-index: 2;
+    position: relative;
+
+    a {
+        color: $grey;
+        text-shadow: 1px 1px 1px #000000;
+        text-decoration: none;
+        
+        &:hover {
+            color: $hibbert-cyan;
+        }
+    }
+}
+
+footer {
+    width: 100vw;
+    text-align: center;
+    color: $grey;
+    padding: 20px 0;
+    line-height: 1.25em;
+    font-size: .8em;
+    z-index: 2;
+    margin-top: 100px;
+    position: relative;
+    
+    a {
+        color: $grey;
+        text-decoration: none;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.one-bar {
+    margin-top: 100px!important;
+    @include media-breakpoint-down(md) {
+        margin: 120px 0px 0px 0px !important;
+        padding: 0px !important;
+    }
+    @include media-breakpoint-down(lg) {
+        margin: 55px 0 0 !important;
+        padding: 0 !important;
+    }
+    @include media-breakpoint-down(xs) {
+        margin: 55px 0 0 !important;
+        padding: 0 !important;
+    }
+}
+
+.two-bar {
+    margin-top: 150px!important;
+    @include media-breakpoint-down(md) {
+        margin: 145px 0px 0px 0px !important;
+    }
+    @include media-breakpoint-down(lg) {
+        margin: 145px 0 0 !important;
+    }
+    @include media-breakpoint-down(xs) {
+        margin: 145px 0 0 !important;
+    }
+}
+
+.two-bar-tiles {
+    margin-top: 150px!important;
+    @include media-breakpoint-down(md) {
+        margin: 120px 0px 0px 0px !important;
+        padding: 0px !important;
+    }
+    @include media-breakpoint-down(lg) {
+        margin: 115px 0 0 !important;
+        padding: 0 !important;
+    }
+    @include media-breakpoint-down(xs) {
+        margin: 115px 0 0 !important;
+        padding: 0 !important;
+    }
+}
+
+.three-bar {
+    margin-top: 185px!important;
+    @include media-breakpoint-down(md) {
+        margin: 185px 0px 0px 0px !important;
+        padding: 0px !important;
+    }
+    @include media-breakpoint-down(lg) {
+        margin: 185px 0 0 !important;
+        padding: 0 !important;
+    }
+    @include media-breakpoint-down(xs) {
+        margin: 105px 0 0 !important;
+        padding: 0 !important;
+    }
+}
+
+#right-divider {
+    border-right: 1px solid $hibbert-blue;
+    margin-bottom: 20px;
+    @include media-breakpoint-down(md) {
+        border-right: 1px solid $hibbert-blue;
+    }
+    @include media-breakpoint-down(xs) {
+        border-bottom: 2px solid $hibbert-blue;
+        border-right: none;
+        padding-bottom: 10px!important;
+    }
+    @include media-breakpoint-down(lg) {
+        border-bottom: 2px solid $hibbert-blue;
+        border-right: none;
+        padding-bottom: 10px!important;
+        h3 {
+            margin: 20px 0 0 0;
+            @include media-breakpoint-down(lg) {
+                margin: 20px 0 0 0;
+            }
+        }
+    }
+}
+
+#left-divider {
+    h3 {
+        margin-bottom: 20px;
+    }
+    @include media-breakpoint-down(lg) {
+        margin: 20px 0 20px 0;
+    }
+}
+
+.valign {
+    vertical-align: middle;
+}
+
+.relative {
+    position: relative;
+}
+
+.clear {
+    clear: both;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.nopad {
+    margin: 0!important;
+    padding: 0!important;
+}
+
+.mobile-hide {
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
+}
+
+.no-pad-top {
+    padding-top: 0;
+}
+
+.margin-top {
+    margin-top: 50px;
+}
+
+.margin-bottom {
+    margin-bottom: 25px;
+}
+
+.margin-left {
+    margin-left: 25px;
+}
+
+.margin-right {
+    margin-right: 25px;
+}
+
+.demo {
+    display: none!important;
+}
+        
+.header {
+    display: none;
+}
+        
+.login-box {
+    @extend .shadow-2;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    left: 50%;
+    padding: 1.5em;
+    min-width: 250px;
+    max-width: 325px;
+    height: auto;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.8);
+    -pie-background: rgba(255, 255, 255, 0.8);
+    behavior: url(PIE.htc);
+    @include media-breakpoint-down(lg) {
+        min-width: 100%;
+        height: 100%;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        top: 50%;
+    }
+}
+        
+.cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+        
+.sub-header {
+    min-height: 100px;
+    padding: 25px 0 25px 0;
+}
+        
+.home-image {
+    background: url(../img/bg-tile.png);
+    background-repeat: repeat;
+    min-height: 600px;
+    background-color: $white;
+}
+        
+.box {
+    background-color: #f6f7f9;
+    border-radius: 2px;
+    margin-bottom: 30px;
+    padding: 24px 30px;
+}
+        
+.box:before,
+.box:after {
+    content: "";
+    display: table;
+}
+        
+.box:after {
+    clear: both;
+}
+        
+.search {
+    border: 0 !important;
+    border-radius: 0 !important;
+}
+        
+.main-filter {
+    border: 1px solid #ccc;
+    background-color: $white;
+}
+        
+.section-header {
+    float: right;
+}
+        
+.section-content-wrapper {
+    display: block;
+    line-height: 25px;
+}
+        
+.trending-header {
+    float: right;
+}
+        
+.trending-content-wrapper {
+    display: block;
+}
+        
+.block img {
+    height: auto;
+    width: 100%;
+}
+        
+.mobile-pad {
+    padding: 5%;
+}
+        
+.product-container {
+    border: 1px solid $grey;
+    background-color: $white;
+    @include media-breakpoint-down(lg) {
+        margin-top: 30px;
+    }
+}
+        
+.margin-left {
+    margin: 0 0 0 3%;
+    padding: 0;
+    @include media-breakpoint-down(lg) {
+        margin: 0;
+        padding: 0;
+    }
+}
+        
+.half-div {
+    width: 48%;
+    display: inline-block;
+    font-size: 15px;
+    padding: 12px;
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
+}
+        
+.rotate {
+    -moz-transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+}
+        
+.rotate.down {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+        
+.open {
+    z-index: 1px;
+    over-flow: none;
+    visibility: visable;
+}
+        
+.hide {
+    display: none;
+}
+        
+.nice-select {
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+        
+.search-drop {
+    border: none !important;
+    border-radius: 0;
+    background-color: #f5f5f5 !important;
+}
+        
+.adjust {
+    flex-basis: 79.2%;
+    max-width: none;
+}
+        
+.nav2 {
+    padding: 10px 0 0 0;
+    font-size: 13px;
+    color: $primary-color;
+    width: 100%;
+    a {
+        color: $primary-color;
+        &:hover,
+        &:focus {
+            color: $hibbert-light-cyan;
+        }
+    }
+}
+        
+.bread-crumb {
+    float: left;
+    // text-shadow: 1px 1px 1px #000000;
+
+    a {
+        color:$navy;
+    }
+}
+
+.collapse-all {
+    color:$navy;
+    text-shadow: 1px 1px 1px #000000;
+
+    i {
+        color:$navy;
+    }
+}
+        
+@include media-breakpoint-down(lg) {
+    .user {
+        float: none !important;
+        margin: 0 0 10px 0;
+        .bread-crumb {
+            float: none;
+        }
+    }
+}
+        
+.user {
+    float: right;
+}
+        
+.total-price {
+    background-color: $white;
+    // border: 2px solid #7fbfdb;
+    width: 100%;
+    text-align: right;
+    padding: 15px 15px 15px 0;
+}
+        
+.banner-logo {
+    width: 300px;
+    // padding: 14px 0 0 15px;
+    padding: 9px 0 0 15px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+        
+.populated-field {
+    height: 45px;
+}
+        
+.img-center {
+    margin: 0 auto;
+}
+
+.bd-example {
+    background: $white;
+}
