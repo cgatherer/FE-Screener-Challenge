@@ -1,0 +1,91 @@
+/* ------------------ Cuomo Event ------------------ */
+
+.node--type-event {
+	.event {
+		&--heading { 
+			.tags-date {
+				width: 100%;
+				display: flex;
+				.tags {
+					@extend h3;
+					color: $gold;
+					margin: rem(0 10px 0 0);
+					float: left;
+					padding: rem(0 0 0 40px);
+					@include media-breakpoint-down(sm) { 
+			    		font-size: 2rem !important;
+					}
+					&:before {
+						position: absolute;
+						top: 4px;
+						left: 0px;
+						content: "";
+						background: url(../images/arrow-blue.svg) no-repeat;
+						width: 30px;
+						height: 30px;
+					}
+				}
+				.date {
+					@extend h3;
+					float: left;
+					color: $blue;
+					margin-bottom: 0;
+					@include media-breakpoint-down(sm) { 
+			    		font-size: 2rem !important;
+			    		margin-bottom: 1.5rem;
+					}
+				}
+			}
+			.title {
+				@extend h2;
+				color: $dark-blue;
+    			line-height: 100%;
+    			width: 100%;
+    			padding: 0; 
+    			margin: 0;
+			}
+		}
+		&--copy {
+			display: block;
+    		width: 100%;
+            margin: 3rem 0 0 0;
+            @include media-breakpoint-down(sm) { 
+			    margin: 1.5rem 0 0 0;
+			}
+			.field--type-image {
+				display: flex;
+				float: none;
+				width: 100%;
+                height: auto;
+                margin: 0 auto;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+			}
+			.body {
+				padding: 2rem 6rem 0;
+			    @include media-breakpoint-down(lg) { 
+			        padding: 1.5rem 1.5rem 0;
+			    }
+			    @include media-breakpoint-down(md) { 
+			        padding: 1.5rem 1.5rem 0;
+			    }
+			    @include media-breakpoint-down(sm) { 
+			        padding: 1.5rem 0;
+			    }
+				.field--name-field-paragraphs {
+					margin-top: 4rem;
+				}
+				.address .country {
+					display: none;
+				}
+				h5 {
+					margin-top: 1.5rem;
+				}
+			}
+		}
+	}
+}

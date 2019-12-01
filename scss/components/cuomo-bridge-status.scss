@@ -1,0 +1,278 @@
+/* ------------------ Cuomo Bridge Status ------------------ */
+
+.bridge-status {
+	&--weather {
+		background-color: $light-gray;
+		padding: 1rem 0;
+		@include media-breakpoint-down(sm) {
+			padding: 0;
+		}
+		.showWeather {
+			@include media-breakpoint-down(sm) {
+    			margin: 0 auto;
+			}
+		}
+		.weather-forcast {
+			display: flex;
+			width: 100%;
+			float: right;
+			max-width: 620px;
+			margin: 0 auto;
+			line-height: 1rem;
+			@include media-breakpoint-down(lg) {
+				max-width: 375px;
+			}
+			@include media-breakpoint-down(md) {
+				max-width: 340px;
+			}
+			@include media-breakpoint-down(sm) {
+				max-width: 320px;
+			}
+			.degrees {
+				font-size: rem(9px);
+			}
+			&--conditions {
+				font-family: 'UniformBlack-Regular';
+				font-weight: 300;
+				font-size: rem(14px);
+				color: $blue;
+				text-transform: uppercase;
+				padding: 1.5rem 0 0 0;
+				line-height: 100%;
+				@include media-breakpoint-down(lg) {
+					font-size: rem(12px);
+				}
+				@include media-breakpoint-down(sm) {
+					font-size: rem(16px);
+				}
+			}
+			&--icon {
+				height: 80px;
+				padding: 0 1rem;
+				overflow: hidden;
+				img {
+					position: relative;
+					top: -10px;
+					right: 5px;
+					-webkit-filter: drop-shadow(1px 1px 1px $gray);
+					filter: drop-shadow(1px 1px 1px $gray);
+					@include media-breakpoint-down(sm) {
+						top: 2px;
+						right: 0px;
+						width: 75px;
+    					height: 75px;
+					}
+				}
+			}
+			&--temp {
+				font-family: 'UniformBlack-Regular';
+				font-weight: 300;
+				color: $blue;
+				padding: 0.7rem 1.5rem 0 0;
+				line-height: 100%;
+				border-right: solid 1px $blue;
+				font-size: 1.3rem;
+				min-width: 120px;
+				@include media-breakpoint-down(lg) {
+					padding: 0.7rem 0 0 0;
+					border-right: none;
+				}
+				@include media-breakpoint-down(sm) {
+					padding: 1.5rem 0 0 0;
+					font-size: rem(16px);
+				}
+				.degrees {
+					font-size: rem(18px);
+				}
+				.decs {
+					font-family: 'ProximaNovaRegular';
+					font-size: 1rem;
+				}
+				.speed {
+					font-family: 'ProximaNovaRegular';
+					font-size: 1rem;
+					@include media-breakpoint-down(sm) {
+						display: none;
+					}
+				}
+			}
+			&--tomorrow {
+				font-family: 'UniformBlack-Regular';
+				font-weight: 300;
+				color: $blue;
+				text-align: center;
+				padding: 0 1rem;
+				height: 80px;
+				overflow: hidden;
+				@include media-breakpoint-down(lg) {
+					display: none;
+				}
+				.day {
+					font-size: rem(10px);
+				}
+				img {
+					position: relative;
+					top: 0px;
+					right: 0px;
+					-webkit-filter: drop-shadow(1px 1px 1px $gray);
+					filter: drop-shadow(1px 1px 1px $gray);
+				}
+			}
+			&--day-after {
+				font-family: 'UniformBlack-Regular';
+				font-weight: 300;
+				color: $blue;
+				text-align: center;
+				padding: 0 1rem;
+				height: 80px;
+				overflow: hidden;
+				border-left: solid 1px $blue;
+				@include media-breakpoint-down(lg) {
+					display: none;
+				}
+				.day {
+					font-size: rem(10px);
+				}
+				img {
+					position: relative;
+					top: 0px;
+					right: 0px;
+					-webkit-filter: drop-shadow(1px 1px 1px $gray);
+					filter: drop-shadow(1px 1px 1px $gray);
+				}
+			}
+		}
+		&.full-weather {
+			.weather-forcast {
+				max-width: none;
+				float: none;
+			}
+		}
+	}
+	&--condition {
+		display: flex;
+		width: 100%;
+		max-width: 340px;
+		margin: 0 auto;
+	}
+	&--path {
+		background-color: $dark-blue;
+		padding: 1.3rem 0 1rem;
+		display: flex;
+		width: 100%;
+		margin: 0 auto;
+		@include media-breakpoint-down(sm) {
+			padding: 0 1.25rem;
+		}
+		&-title { 
+			margin: 0 auto;
+			.title {
+				padding: 1.75rem 0 0 0;
+				font-size: rem(16px);
+				float: left;
+			}
+		}
+		&-condition {
+			display: flex;
+			width: 50%;
+			float: left;
+			font-family: 'UniformBlack-Regular';
+			font-weight: 300;
+			font-size: rem(16px);
+			line-height: 1.3rem;
+			padding: 1.05rem;
+			color: $light-gray;
+			text-transform: uppercase;
+			span {
+				margin: 0 0 0 15%;
+				@include media-breakpoint-down(lg) {
+					margin: 0 0 0 0;	
+				}
+			}
+			@include media-breakpoint-down(lg) {
+				font-size: rem(14px);
+			}
+			@include media-breakpoint-down(md) {
+				font-size: rem(10px);
+			}
+			@include media-breakpoint-down(sm) {
+				width: 100%;
+				padding: 0;
+			}
+		}
+		&-open,
+		&-closed {
+			display: flex;
+			width: 50%;
+			float: right;
+			font-family: 'UniformBlack-Regular';
+			font-weight: 300;
+			font-size: rem(14px);
+			line-height: 100%;
+			padding: 1.15rem;
+			color: $light-gray;
+			text-transform: uppercase;
+			span {
+				height: 35px;
+				padding: .5rem 1rem;
+				margin: 0 35% 0 0;
+				border: solid 2px $white;
+				@include media-breakpoint-down(lg) {
+					padding: .5rem;
+				}
+			}
+			@include media-breakpoint-down(sm) {
+				width: 32%;
+			}
+		}
+	}
+	&--falcon-cam {
+		background-color: $gold;
+		display: flex;
+		width: 100%;
+		&-link {
+			font-family: 'UniformBlack-Regular';
+			font-weight: 300;
+			font-size: rem(16px);
+			line-height: 1.3rem;
+			margin: 0 auto;
+			padding: 2.4rem 1rem 2rem;
+			width: 100%;
+			max-width: 250px;
+			@include media-breakpoint-down(lg) {
+				font-size: rem(14px);
+			}
+			@include media-breakpoint-down(md) {
+				font-size: rem(10px);
+			}
+			@include media-breakpoint-down(sm) {
+				padding: 1.25rem 0rem;
+			}
+			a {
+				text-decoration: none;
+			}
+			span {
+				color: $blue;
+				text-transform: uppercase;
+				margin: 0 auto;
+				&:after {
+					position: absolute;
+					top: 25px;
+					content : "";
+					background : url(../images/play-arrow.svg) no-repeat;
+					width: 45px;
+					height: 45px;
+					margin: 10px 0 0 20px;
+					@include media-breakpoint-down(sm) {
+						top: 13px;
+						margin: 0 0 0 5px;
+					}
+				}
+			}
+			.mobile {
+				padding: rem(5px);
+				font-size: rem(16px);
+			}
+		}
+	}
+}

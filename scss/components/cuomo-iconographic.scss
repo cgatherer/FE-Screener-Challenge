@@ -1,0 +1,76 @@
+/* ------------------ Cuomo Iconographic ------------------ */
+.iconographic-wrapper {
+	background-color: $light-gray;
+}
+.paragraph--type--iconographic {
+	.iconographic {
+		&--title {
+			.title {
+				@extend h2;
+				color: $blue; 
+				line-height: 100%;
+    			margin-bottom: .75rem;
+				@include media-breakpoint-down(sm) { 
+			        margin-bottom: 0rem;
+			    }
+			}
+		}
+	}
+}
+
+.paragraph--type--icon-set {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 3rem;
+	@include media-breakpoint-down(md) { 
+		margin-bottom: 1.5rem;
+	}
+	.title {
+		font-family: 'AlternateGotNo2D';
+		color: $blue; 
+		font-size: 2.5rem;
+		font-weight: 300;
+		line-height: 100%;
+		text-transform: uppercase;
+    	margin-bottom: .75rem;
+    	@include media-breakpoint-down(md) { 
+			font-size: 1.5rem;
+		}
+	}
+}
+
+.paragraph--type--icon {
+	width: 100%;
+	min-height: 200px;
+    max-width: 100px;
+    margin: rem(0 48px 0 0);
+    float: left;
+	@include media-breakpoint-down(sm) { 
+		margin: rem(0 25px 0 0);
+		max-width: 130px;
+	}
+    .icon-title {
+    	font-family: 'ProximaNovaRegular';
+	   	color: $blue; 
+		font-size: 1rem;
+		font-weight: 900;
+		line-height: 100%;
+		text-align: center;
+		text-transform: uppercase;
+	}
+   	.icon-image {
+   		display: flex;
+    	justify-content: center;
+   		align-items: center;
+   		margin-bottom: 1.5rem;
+		.field--type-image {
+			float: left;
+			margin: 0;
+			img {
+				width: 100%;
+	    		max-width: 100px;
+	    		height: auto;
+			}
+		}
+   	}
+}

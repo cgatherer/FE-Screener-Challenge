@@ -1,0 +1,208 @@
+/* ------------------ Cuomo Bridge Navigation ------------------ */
+
+.paragraph--type--bridge-navigation {
+	background-color: $gray;
+	.bridge-nav {
+		&--east {
+			.paragraph--type--overlook-link {
+				width: 100%;
+   				max-width: rem(325px);
+    			float: right;
+    			.overlook-arrow{
+    				float: left;
+					background-image: url(../images/arrow-gold-blue.svg);
+				    background-repeat: no-repeat;
+				    width: 25px;
+				    height: 25px;
+				    padding: rem(0 50px 0 0);
+				    margin-top: rem(60px);
+				    @include media-breakpoint-down(md) { 
+						margin-top: rem(30px);
+		    		}
+		    		@include media-breakpoint-down(sm) { 
+						margin-top: rem(60px);
+		    		}
+				}
+				.overlook-title {
+					float: left; 
+					width: rem(150px); 
+					padding: rem(50px 0);
+					@include media-breakpoint-down(md) { 
+						width: rem(128px); 
+						padding: rem(25px 0);
+		    		}
+		    		@include media-breakpoint-down(sm) { 
+						width: rem(150px);
+						padding: rem(50px 0);
+		    		}
+					&--visit {
+						font-family: 'UniformBlack-Regular';
+						font-weight: 900;
+						font-size: rem(14px);
+						text-transform: uppercase;
+						color: $gold;
+						text-align: left;
+						letter-spacing: 2px;
+						margin:0;
+						line-height: 100%;
+						@include media-breakpoint-down(md) { 
+							font-size: rem(10px);
+		    			}
+		    			@include media-breakpoint-down(sm) { 
+							font-size: rem(14px);
+		    			}
+					}
+					&--title {
+						font-family: 'UniformBlack-Regular';
+						font-weight: 900;
+						font-size: rem(14px);
+						text-transform: uppercase;
+						color: $blue;
+						float: right;
+						text-align: left;
+						letter-spacing: 2px;
+						margin:0;
+						line-height: 100%;
+						@include media-breakpoint-down(md) { 
+							font-size: rem(10px);
+		    			}
+		    			@include media-breakpoint-down(sm) { 
+							font-size: rem(14px);
+		    			}
+					} 
+				}
+				.overlook-distance {
+					padding: rem(35px 35px 0 0);
+					&--value {
+						font-family: 'UniformMedium-Regular';
+						font-weight: 900;
+						text-transform: uppercase;
+						color: $blue;
+						float: right;
+						height: rem(61.62px);	
+						width: rem(61.62px);
+						padding: rem(12px 5px);
+						margin: 0;
+						border-radius: 100%;
+						border: solid 4px $blue;
+						@include media-breakpoint-down(lg) { 
+							display:none;
+		    			}
+		    			@include media-breakpoint-down(sm) { 
+							display:block;
+		    			}
+					}
+				}
+			}
+		}
+		&--west {
+			.paragraph--type--overlook-link {
+				width: 100%;
+   				max-width: rem(325px);
+    			float: left;
+    			.overlook-arrow {
+    				float: right;
+				    background-image: url(../images/arrow-gold-blue.svg);
+				    background-repeat: no-repeat;
+				    width: 25px;
+				    height: 25px;
+				    padding: rem(0 0 0 50px);
+				    margin-top: rem(60px);
+				    transform: rotate(180deg);
+				    @include media-breakpoint-down(md) { 
+						margin-top: rem(30px);
+		    		}
+		    		@include media-breakpoint-down(sm) { 
+						margin-top: rem(60px);
+		    		}
+    			}
+				.overlook-title {
+					float: right; 
+					width: rem(150px);
+					padding: rem(50px 0);
+					@include media-breakpoint-down(md) { 
+						width: rem(128px); 
+						padding: rem(25px 0);
+		    		}
+		    		@include media-breakpoint-down(sm) { 
+						width: rem(150px);
+						padding: rem(50px 0);
+		    		}
+					&--visit {
+						font-family: 'UniformBlack-Regular';
+						font-weight: 900;
+						font-size: rem(14px);
+						text-transform: uppercase;
+						color: $gold;
+						text-align: right;
+						letter-spacing: 2px;
+						margin:0;
+						line-height: 100%;
+						@include media-breakpoint-down(md) { 
+							font-size: rem(10px);
+		    			}
+		    			@include media-breakpoint-down(sm) { 
+							font-size: rem(14px);
+		    			}
+					}
+					&--title {
+						font-family: 'UniformBlack-Regular';
+						font-weight: 900;
+						font-size: rem(14px);
+						text-transform: uppercase;
+						color: $blue;
+						float: left;
+						text-align: right;
+						letter-spacing: 2px;
+						margin:0;
+						line-height: 100%;
+						@include media-breakpoint-down(md) { 
+							font-size: rem(10px);
+		    			}
+		    			@include media-breakpoint-down(sm) { 
+							font-size: rem(14px);
+		    			}
+					}
+				}
+				.overlook-distance {
+					padding: rem(35px 0 0 35px);
+					&--value {
+						font-family: 'UniformMedium-Regular';
+						font-weight: 900;
+						text-transform: uppercase;
+						color: $blue;
+						float: left;
+						height: rem(61.62px);	
+						width: rem(61.62px);
+						padding: rem(12px 5px);
+						margin: 0;
+						border-radius: 100%;
+						border: solid 4px $blue;
+						@include media-breakpoint-down(lg) { 
+							display:none;
+		    			}
+		    			@include media-breakpoint-down(sm) { 
+							display:block;
+		    			}
+					}
+				}
+			}
+		}
+		&--img {
+			.field--type-image {
+			    width: 100%;
+			    height: 100%;
+			    display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+			    img {
+	    			flex-shrink: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+				}
+			}	
+		}
+	}
+}

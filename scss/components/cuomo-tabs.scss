@@ -1,0 +1,70 @@
+/* ------------------ Cuomo Tabs ------------------ */
+
+.paragraph--type--tabs {
+	nav {
+		padding: 3rem 6rem 6rem;
+		@include media-breakpoint-down(lg) { 
+	        padding: 1.5rem 3rem 3rem;
+	    }
+	    @include media-breakpoint-down(sm) { 
+	        padding: .75rem 1.5rem 1.5rem;
+	    }
+		.nav-tabs {
+			border-bottom: solid 2px $dark-gray;
+			@include media-breakpoint-down(sm) { 
+			    border-bottom: none;
+			}
+			.nav-link {
+				font-family: 'Oswald-book';
+				font-size: 1.75rem;
+				font-weight: 300;
+				color: $dark-blue;
+				letter-spacing: .1rem;
+				text-transform: uppercase;
+				border: $white;
+				@include media-breakpoint-down(md) { 
+			        font-size: 1rem;
+			    }
+			    @include media-breakpoint-down(sm) { 
+			        display: block;
+    				width: 100% !important;
+			    }
+			}
+			.active {
+				color: $dark-blue;
+	    		background-color: $white;
+	    		border-bottom: solid 5px $dark-blue;
+			}
+		}
+		&.nav-tabs-bottom {
+			padding: 3rem 0 0;
+			.nav-tabs {
+				border-bottom: none;
+				a.nav-link {
+					background: #d8d8d8;
+					border-top: 1px solid #666666;
+					border-bottom: 1px solid #666666;
+					border-left: 1px solid #666666;
+					-webkit-border-radius: 0;
+					-moz-border-radius: 0;
+					border-radius: 0;
+					padding-top: 20px;
+					padding-bottom: 20px;
+					&.active {
+						background: #ffffff;
+						border-bottom: 1px solid #666666;
+						span {
+							display: none;
+						}
+						&:after {
+							content: "Back to Top";
+						}
+					}
+					&:last-child {
+						border-right: 1px solid #666666;
+					}
+				}
+			}
+		}
+	}
+}

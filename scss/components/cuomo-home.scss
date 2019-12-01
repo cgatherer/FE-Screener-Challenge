@@ -1,0 +1,38 @@
+/* ------------------ Cuomo Homepage ------------------ */
+
+.path-frontpage {
+	.field__label {
+		display: none;
+	}
+	.node__content {
+		margin-top: 0rem;
+	}
+	.hero {
+		display: none;
+	}
+	.no-hero {
+		display: none;
+	}
+}
+
+#block-twitterfeedfrontpage {
+	margin-left: 50px;
+	border-top: solid 1px #002d72;
+	h2 {
+		@extend .subhead;
+		color: $blue;
+		padding: rem(5px 0 0 0);
+	}
+	.twitter-button {
+		border: solid 3px $blue;
+		a {
+			display: block;
+			font-size: rem(14px);
+			font-family: 'UniformBlack-Regular';
+			color: $blue;
+			padding: rem(14px 55px 9px);
+    		text-transform: uppercase;
+			text-decoration: none;
+		}
+	}
+}

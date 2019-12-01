@@ -1,0 +1,292 @@
+/* Google Fonts */
+@import url(https://hello.myfonts.net/count/39bdf2);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+HK:300,400,700&display=swap);
+
+/* Cuomo Fonts */
+@font-face {
+    font-family: 'AlternateGotNo2D';
+    src: url(../webfonts/39BDF2_0_0.eot);
+    src: url(../webfonts/39BDF2_0_0.eot?#iefix) format('embedded-opentype'),url('../webfonts/39BDF2_0_0.woff2') format('woff2'),url('../webfonts/39BDF2_0_0.woff') format('woff'),url('../webfonts/39BDF2_0_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+ 
+@font-face {
+    font-family: 'UniformBlack-Regular';
+    src: url(../webfonts/39BDF2_1_0.eot);
+    src: url(../webfonts/39BDF2_1_0.eot?#iefix) format("embedded-opentype"),url(../webfonts/39BDF2_1_0.woff2) format("woff2"),url(../webfonts/39BDF2_1_0.woff) format("woff"),url(../webfonts/39BDF2_1_0.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'UniformMedium-Regular';
+    src: url(../webfonts/39BDF2_2_0.eot);
+    src: url(../webfonts/39BDF2_2_0.eot?#iefix) format("embedded-opentype"),url(../webfonts/39BDF2_2_0.woff2) format("woff2"),url(../webfonts/39BDF2_2_0.woff) format("woff"),url(../webfonts/39BDF2_2_0.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+   
+@font-face {
+    font-family: 'UniformRegular-Regular';
+    src: url(../webfonts/39BDF2_3_0.eot);
+    src: url(../webfonts/39BDF2_3_0.eot?#iefix) format('embedded-opentype'),url(../webfonts/39BDF2_3_0.woff2) format("woff2"),url(../webfonts/39BDF2_3_0.woff) format("woff"),url(../webfonts/39BDF2_3_0.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+ 
+/* New York State Fonts */
+@font-face {
+    font-family: 'Oswald';
+    src: url(../webfonts/oswald-light-webfont.eot);
+    src: url(../webfonts/oswald-light-webfont.eot?#iefix) format("embedded-opentype"), url(../webfonts/oswald-light-webfont.woff) format("woff"), url(../webfonts/oswald-light-webfont.ttf) format("truetype"), url(../webfonts/oswald-light-webfont.svg#oswaldlight) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald-bold';
+    src: url(../webfonts/oswald-bold-webfont.eot);
+    src: url(../webfonts/oswald-bold-webfont.eot?#iefix) format("embedded-opentype"), url(../webfonts/oswald-bold-webfont.woff) format("woff"), url(../webfonts/oswald-bold-webfont.ttf) format("truetype"), url(../webfonts/oswald-bold-webfont.svg#oswaldbold) format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Oswald-book';
+    src: url(../webfonts/oswald-regular-webfont.eot);
+    src: url(../webfonts/oswald-regular-webfont.eot?#iefix) format("embedded-opentype"), url(../webfonts/oswald-regular-webfont.woff) format("woff"), url(../webfonts/oswald-regular-webfont.ttf) format("truetype"), url(../webfonts/oswald-regular-webfont.svg#oswaldbook) format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'ProximaNovaBold';
+    src: url(../webfonts/ProximaNova-Bold-webfont.eot);
+    src: url(../webfonts/ProximaNova-Bold-webfont.eot?#iefix) format("embedded-opentype"), url(../webfonts/ProximaNova-Bold-webfont.woff) format("woff"), url(../webfonts/ProximaNova-Bold-webfont.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    src: url(../webfonts/ProximaNova-Reg-webfont.eot);
+    src: url(../webfonts/ProximaNova-Reg-webfont.eot?#iefix) format("embedded-opentype"), url(../webfonts/ProximaNova-Reg-webfont.woff) format("woff"), url(../webfonts/ProximaNova-Reg-webfont.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'ProximaNovaSemibold';
+    src: url(../webfonts/ProximaNova-Sbold-webfont.eot);
+    src: url(../webfonts/ProximaNova-Sbold-webfont.eot?#iefix) format("embedded-opentype"), url(../webfonts/ProximaNova-Sbold-webfont.woff) format("woff"), url(../webfonts/ProximaNova-Sbold-webfont.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'ProximaNovaExtrabold';
+    src: url(../webfonts/ProximaNova-Xbold-webfont.eot);
+    src: url(../webfonts/ProximaNova-Xbold-webfont.eot?#iefix) format("embedded-opentype"), url(../webfonts/ProximaNova-Xbold-webfont.woff) format("woff"), url(../webfonts/ProximaNova-Xbold-webfont.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url(../webfonts/icomoon.eot?k8vrha);
+    src: url(../webfonts/icomoon.eot?#iefixk8vrha) format("embedded-opentype"), url(../webfonts/icomoon.woff?k8vrha) format("woff"), url(../webfonts/icomoon.ttf?k8vrha) format("truetype"), url(../webfonts/icomoon.svg?k8vrha#icomoon) format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+/* TYPOGRAPHY */
+h1 {
+    font-family: 'UniformBlack-Regular';
+    font-size: rem(90px);
+    font-weight: 400;
+    text-align: left;
+    line-height: 100%;
+    text-transform: uppercase;
+    word-break: normal;
+    @include media-breakpoint-down(lg) { 
+        font-size: rem(64px);
+    }
+    @include media-breakpoint-down(sm) { 
+        font-size: rem(40px);
+    }
+}
+
+h2 {
+    font-family: 'UniformBlack-Regular';
+    font-size: rem(42px);
+    font-weight: 400;
+    text-align: left;
+    line-height: 100%;
+    text-transform: uppercase;
+    word-break: normal;
+    @include media-breakpoint-down(sm) { 
+        font-size: rem(32px);
+    }
+}
+
+h3 {
+    font-family: 'AlternateGotNo2D';
+    font-size: rem(42px);
+    text-align: left;
+    line-height: 100%;
+    text-transform: uppercase;
+    word-break: normal;
+    @include media-breakpoint-down(sm) { 
+        font-size: rem(32px);
+    }
+}
+
+h4 {
+    font-family: 'AlternateGotNo2D';
+    font-size: rem(24px);
+    text-align: left;
+    line-height: 100%;
+    text-transform: uppercase;
+    word-break: normal;
+}
+
+h5 {
+    font-family: 'UniformBlack-Regular';
+    font-size: rem(16px);
+    font-weight: 400;
+    color: $blue;
+    text-align: left;
+    line-height: 100%;
+    text-transform: uppercase;
+    word-break: normal;
+}
+
+p {
+    font-family: 'UniformRegular-Regular';
+    font-size: rem(16px);
+    font-weight: 400;
+    text-align: left;
+    line-height: rem(28px);
+}
+
+li {
+    font-family: 'UniformRegular-Regular';
+    font-size: rem(14px);
+    font-weight: 400;
+    text-align: left;
+    line-height: rem(24px);
+}
+
+.subhead {
+    font-family: 'UniformBlack-Regular';
+    font-size: rem(12px);
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: left;
+    line-height: rem(14px);
+    text-transform: uppercase;
+    padding-top: 0.3rem;
+}
+
+.caption {
+    font-family: 'UniformRegular-Regular';
+    font-size: rem(16px);
+    font-weight: 400;
+    text-align: left;
+    line-height: rem(24px);
+}
+
+.large-heading {
+    @extend h1;
+}
+
+.small-heading {
+    @extend h2;
+}
+
+.section-title {
+    color: $gold;
+    &--arrow-left {
+        position: relative;
+        top: 6px;
+        height: 25px;
+        width: 25px;
+        background-repeat: no-repeat;
+        font-size: rem(42px);
+        margin: rem(0 12px 0 0);
+        &-blue {
+            background-image: url(../images/arrow-gold-blue.svg);
+        }
+        &-white {
+            background-image: url(../images/arrow-gold-white.svg);
+        }
+    }
+    &--arrow-right {
+        position: relative;
+        top: 6px;
+        height: 25px;
+        width: 25px;
+        background-repeat: no-repeat;
+        font-size: rem(42px);
+        margin: rem(0 0 0 12px);
+        &-blue {
+            background-image: url(../images/arrow-gold-blue_right.svg);
+        }
+        &-white {
+            background-image: url(../images/arrow-gold-white_right.svg);
+        }
+    }
+}
+
+// Custom Font Families
+$font-lato: 'Lato',
+Arial,
+Verdana,
+sans-serif;
+$font-raleway: 'Raleway',
+Arial,
+Verdana,
+sans-serif;
+
+// Font, line-height, and color for body text, headings, and more.
+$font-family-sans-serif: -apple-system,
+system-ui,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+sans-serif !default;
+$font-family-serif: Georgia,
+"Times New Roman",
+Times,
+serif !default;
+$font-family-monospace: Menlo,
+Monaco,
+Consolas,
+"Liberation Mono",
+"Courier New",
+monospace;
+
+// Custom Variables
+$font-size-xl: 6rem;
+$font-weight-thin: 300;
+$font-weight-regular: 400;
+
+// Font Variables
+$font-family-base: $font-family-sans-serif;
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-lg: 1.25rem;
+$font-size-sm: .875rem;
+$font-size-xs: .75rem;
+$font-weight-normal: normal;
+$font-weight-bold: bold;
+$font-weight-base: $font-weight-normal;
+$line-height-base: 1.5;
+$font-size-h1: 2.5rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.75rem;
+$font-size-h4: 1.5rem;
+$font-size-h5: 1.25rem;
+$font-size-h6: 1rem;

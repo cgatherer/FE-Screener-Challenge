@@ -1,0 +1,381 @@
+/* ------------------ Cuomo News & Events ------------------ */
+
+.path-frontpage {
+    #block-newssection {
+        h1, h2, h3, h4, h5, h6 {
+            @extend h1;
+            color: $blue;
+            width: 100%;
+            max-width: 500px;
+        }
+    }
+	.news-events {
+		h3 {
+			color: $dark-blue;
+    		font-size: 6rem;
+    		font-weight: 400;
+    		text-transform: uppercase;
+    		line-height: 100%;
+    		width: 50%;
+    		padding: 0;
+            @include media-breakpoint-down(sm) { 
+                font-size: 4rem;
+                font-weight: 400;
+                width: 100%;
+            }
+		}
+		.new-events-teaser {
+			display: block;
+    		width: 100%;
+            margin: 6rem 0;
+            @include media-breakpoint-down(sm) { 
+                margin: 3rem 0;
+            }
+            .col-auto {
+                @include media-breakpoint-down(sm) { 
+                    padding: 0;
+                }  
+            }
+            &--img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                img {
+                    flex-shrink: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &--copy {
+                background-color: $light-gray;
+                padding-bottom: 3rem;
+            }
+            &--copy-inner {
+                padding: 5rem 6rem;
+                @include media-breakpoint-down(lg) { 
+                    padding: 3rem;
+                }
+                @include media-breakpoint-down(sm) { 
+                    padding: 1.5rem;
+                }
+                .date {
+                    font-family: 'AlternateGotNo2D';
+                    color: $gold;
+                    font-size: rem(24px);
+                    text-transform: uppercase;
+                    margin-bottom: 1.5rem;
+                    .sl {
+                        color: #002d72;
+                    }
+                }
+                .title {
+                    @extend h2;
+                    line-height: 100%;
+                    margin: 0 0 .75rem 0;
+                    a {
+                        color: $dark-blue;
+                        transition: ease all .3s;
+                        &:hover {
+                            color: $accent-shade;
+                            text-decoration: none;
+                        }
+                    }
+                }
+                .body {
+                    @extend p;
+                    float: left;
+                    width: 100%;
+                    margin-bottom: .75rem;
+                    p {
+                        padding-bottom: 0;
+                    }
+                }
+                .link {
+                    color: $blue;
+                    font-size: rem(14px);
+                    padding: 0.6rem 1rem;
+                    border: solid 3px $blue;
+                    transition: ease all .3s;
+                    float: left;
+                    margin: 10px 0 20px;
+                    &:hover {
+                        border: solid 3px $gold;
+                        text-decoration: none;
+                    }
+                    a {
+                        font-family: 'UniformBlack-Regular';
+                        color: $blue;
+                        padding: rem(16px 45px 16px 16px);
+                        transition: ease all .3s;
+                        &:after {
+                            position: absolute;
+                            content : "";
+                            background : url(../images/arrow-double-blue.svg) no-repeat;
+                            width: 10px;
+                            height: 10px;
+                            padding: rem(8px);
+                            margin-top: 3px;
+                            margin-left: rem(16px);
+                            float: right;
+                            transform: rotate(180deg);
+                        }
+                        &:hover {
+                            color: $gold !important;
+                            text-decoration: none;
+                            &:after {
+                                position: absolute;
+                                content : "";
+                                background : url(../images/arrow-double-gold.svg) no-repeat;
+                                width: 10px;
+                                height: 10px;
+                                padding: rem(8px);
+                                margin-top: 3px;
+                                margin-left: rem(16px);
+                                float: right;
+                                transform: rotate(180deg);
+                            }
+                        } 
+                    }
+                    i {
+                        padding-left: 1.5rem;
+                    }
+                }
+            }
+		}
+		.block-views-blocknews-and-events-block-1 {
+			display: block;
+    		width: 60%;
+            margin-bottom: 5rem;
+            @include media-breakpoint-down(lg) {
+                width: 50%;
+            }
+            @include media-breakpoint-down(md) {
+                width: 100%;
+            }
+            @include media-breakpoint-down(sm) {}
+            .item-list {
+                li {
+                    border-top: solid 1px $blue;
+                    &:last-of-type {
+                        border-bottom: solid 1px $blue;
+                    }
+                    position: relative;
+                    i {
+                        color: $blue;
+                        padding-left: 1.5rem;
+                        right: -5px;
+                        top: 38%;
+                        position: absolute;
+                    }
+                }
+                a {
+                    transition: ease all .3s;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+                .date {
+                    font-family: 'UniformBlack-Regular';
+                    color: $blue !important;
+                    font-size: rem(12px);
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    margin-bottom: 1.5rem;
+                }
+                .views-field-title {
+                    position: relative;
+                    padding-bottom: 10px;
+                    span {
+                        color: $black !important;
+                        font-size: 1.25rem;
+                        font-weight: 400;
+                        line-height: 100%;
+                        a {
+                            color: $dark-blue;
+                            transition: ease all .3s;
+                            &:hover {
+                                color: $accent-shade;
+                                text-decoration: none;
+                            }
+                        }
+
+                    }
+                }
+            }
+		}
+        .block-twitter-feed-frontpage-block {
+            @include media-breakpoint-down(md) { 
+                display: none;
+            }
+        }
+		.timeline-InformationCircle-widgetParent {
+		    position: relative;
+		    display: none;
+		}
+	}
+}
+
+.view-events, .view-news-and-events {
+    .view-header {
+        h2 {
+            @extend h1;
+            color: $blue;
+        }
+    }
+    .views-pager {
+        width: 100%;
+        nav {
+            display: flex;
+            ul {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.view-events {
+    .card-columns {
+        column-count: 2;
+        @include media-breakpoint-down(sm) {
+            column-count: 1;
+        }
+        .card {
+            .views-field-field-image {
+                background-color: $black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-height: rem(325px);
+                overflow: hidden;
+                img {
+                    position: relative;
+                    flex-shrink: 0;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+    .left {
+        padding: 0;
+    }
+    .right {
+        background-color: #f4f4f4;
+        padding: 3rem;
+    }
+    .views-row {
+        margin-bottom: 1.2rem;
+    }
+    .views-field-field-image {
+        img {
+            width: auto;
+            height: 100%;
+        }
+    }
+    .item-wrapper {
+        background-color: #f4f4f4;
+        padding: 3rem;
+    }
+    .views-field-field-event-daterange {
+        @extend h4;
+        color: $gold;
+        margin-bottom: .25rem;
+        .sl {
+            color: $blue;
+        }
+    }
+    .views-field-title {
+        h3 {
+            @extend h2;
+            color: $blue;
+            margin-bottom: 1.5rem;
+        }
+    }
+    .views-field-body {
+        .field-content {
+            @extend p;
+        }
+    }
+    .views-field-view-node {
+        margin-top: 2rem;
+        a {
+            font-family: 'UniformBlack-Regular';
+            color: #fff;
+            font-size: 0.875rem;
+            font-weight: 900;
+            line-height: 1.1875rem;
+            padding: 1rem 4rem 1rem 1rem;
+            text-transform: uppercase;
+            border: solid 3px #fff;
+            -webkit-transition: ease all .3s;
+            -o-transition: ease all .3s;
+            transition: ease all .3s;
+            &:hover {
+                color: $gold !important;
+                border: solid 3px $gold !important;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.block-views-blocknews-and-events-block-3 {
+    .view-id-news_and_events {
+        .inset-pad-no-top {
+            padding-bottom: 4rem;
+        }
+    }
+    .item-list {
+        width: 100%;
+        li {
+            border-top: solid 1px $blue;
+            &:last-of-type {
+                border-bottom: solid 1px $blue;
+            }
+            position: relative;
+            i {
+                color: $blue;
+                padding-left: 1.5rem;
+                right: -5px;
+                top: 38%;
+                position: absolute;
+            }
+        }
+        a {
+            transition: ease all .3s;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .date {
+            font-family: 'UniformBlack-Regular';
+            color: $blue !important;
+            font-size: rem(12px);
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+        .views-field-title {
+            position: relative;
+            padding-bottom: 10px;
+            span {
+                color: $black !important;
+                font-size: 1.1rem;
+                font-weight: 400;
+                line-height: 100%;
+                a {
+                    color: $dark-blue;
+                    transition: ease all .3s;
+                    &:hover {
+                        color: $accent-shade;
+                        text-decoration: none;
+                    }
+                }
+
+            }
+        }
+
+    }
+}

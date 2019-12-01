@@ -1,0 +1,94 @@
+/* ------------------ Cuomo Stat Card ------------------ */ 
+
+.paragraph--type--stat-card {
+	.stat-card {
+		&--copy {
+			.title {
+				color: $blue; 
+    			padding: 0 6rem 0 0;
+    			margin-bottom: 1.5rem;
+    			@include media-breakpoint-down(sm) { 
+			        padding: 0;
+			    }
+			}
+			.subtile {
+				color: $gold;
+		        font-size: 1rem;
+		        margin: 0 0 1rem 0;
+    			width: 55%;
+		        border-top: 1px solid $gold;
+		        @include media-breakpoint-down(md) { 
+		            width: 75%;
+		        }
+		        @include media-breakpoint-down(sm) { 
+		            width: 100%;
+		        }
+			}
+			p {
+				font-family: 'UniformBlack-Regular';
+				font-size: 2.75rem;
+				line-height: 100%;
+    			padding: 0px 3rem 0 0;
+				margin-bottom: .5rem;
+				@include media-breakpoint-down(lg) { 
+			        font-size: 2.75rem;
+    				padding: 0 2rem 0 0;
+					margin-bottom: .5rem;
+			    }
+				@include media-breakpoint-down(md) { 
+			        font-size: 2rem;
+    				padding: 0 2rem 0 0;
+					margin-bottom: .5rem;
+			    }
+				@include media-breakpoint-down(sm) { 
+			        padding: 0;
+			        margin-bottom: .5rem;
+			    }
+			    &:last-child {
+			    	margin-bottom: 3rem;
+			    }
+			}
+			a {
+				font-family: 'UniformBlack-Regular';
+				color: $white;
+				font-size: rem(16px);
+				padding: 1rem;
+				border: solid 3px $white;
+				transition: ease all .3s;
+				&:hover {
+					color: $gold !important;
+					border: solid 3px $gold !important;
+					text-decoration: none;
+				}
+			}
+			i {
+				padding-left: 1.5rem;
+			}
+		}
+		&--img {
+			.field--type-image {
+				width: 100%;
+			    height: 100%;
+			    display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+				img {
+					padding-top: 4rem;
+					flex-shrink: 0;
+	                width: 100%;
+	                height: auto;
+			    	@include media-breakpoint-down(lg) { 
+				        padding-top: 3.5rem;
+				    }
+					@include media-breakpoint-down(md) { 
+				        padding-top: 3rem;
+				    }
+					@include media-breakpoint-down(sm) { 
+				        padding-top: 0;
+				    }
+				}
+			}
+		}
+	}
+}

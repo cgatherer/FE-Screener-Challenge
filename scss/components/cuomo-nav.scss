@@ -1,0 +1,773 @@
+/* ------------------ NY State Nav ------------------ */
+
+.ny-state-nav { 
+    border-bottom: solid 1px #aaa;
+    background-color: $white;
+    @include media-breakpoint-down(md) { 
+        display: none !important;
+        visibility: hidden;
+    }
+    &--mobile {
+        display: block;
+        @include media-breakpoint-up(lg) { 
+            display: none !important;
+            visibility: hidden; 
+        }
+        .ny-state-mobile-menu {
+            display:none;
+            border-bottom: solid 1px $dark-gray;
+            .nav {
+                display: block !important;
+            }
+            form {
+                position: relative;
+                vertical-align: baseline;
+                width: 100%;
+                background-color: $form-bg;
+                text-align: center;
+                padding: 20px 40px !important;
+                .nav-link-search {
+                    font-family: "ProximaNovaSemibold";
+                    padding: 7px 20px 7px 30px;
+                    border: solid 1px #d9e2e2;
+                    border-radius: 30px;
+                    outline: none;
+                    vertical-align: baseline;
+                    line-height: 20px;
+                    position: relative;
+                    width: 100%;
+                }
+                i {
+                    position: relative;
+                    top: -27px;
+                    left: 10px;   
+                }
+                .submit-search {
+                    display: none;
+                }
+            }
+        }
+        .block-ny-logo-block {
+            padding: .5em 0;
+            width: 93%;
+            border-right: solid 1px $dark-gray;
+            @include media-breakpoint-down(sm) { 
+                width: 85%; 
+            }
+        }
+        .expand-menu-mobile {
+            font-size: 1.125em;
+            right: 0;
+            bottom: 12px;
+            position: absolute;
+            width: 65px;
+            height: 55px;
+            cursor: pointer;
+            // border-left: solid 1px #d9e2e2;
+            &--rotate {
+                transform: rotate(180deg);
+            }
+            &:before {
+                position: absolute;
+                font-family: 'icomoon';
+                speak: none;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-transition: -webkit-transform 0.3s;
+                -moz-transition: -moz-transform 0.3s;
+                -o-transition: -o-transform 0.3s;
+                transition: transform 0.3s;
+                color: #d5820d;
+                content: "\e616";
+                text-align: center;
+                height: 55px;
+                line-height: 55px;
+                left: 50%;
+                margin-left: -9px;
+            }
+        }
+    }
+    .region-secondary-menu {
+        position: relative;
+        -webkit-transform: transform3d(0, 0, 0);
+        -moz-transform: transform3d(0, 0, 0);
+        -ms-transform: transform3d(0, 0, 0);
+        -o-transform: transform3d(0, 0, 0);
+        transform: transform3d(0, 0, 0);
+    }
+    .block-ny-logo-block {
+        padding: 12px 0;
+        border: none;
+        margin: 0;
+        width: 18%;
+        text-align: center;
+        position: relative;
+        background: $white;
+        z-index: 6;
+        border-right: solid 1px $light-gray;
+        img {
+            padding: rem(0 0 0 38px);
+        }
+    }
+    .menu--ny-state-top-nav {
+        position: relative;
+        z-index: 10;
+        background: #fff;
+        border: none;
+        margin-top: 22px;
+        .nav {
+            list-style-type: none;
+            padding: 0px;
+            margin-top: 0px;
+            margin-left: 20px;
+            .nav-item{
+                padding: 0 10px;
+                border-top: none;
+                a {
+                    font-family: "ProximaNovaSemibold";
+                    text-decoration: none;
+                    color: $black;
+                    @include font-size(20px);
+                    padding: 10px;
+                    transition: color .25s;
+                    @include media-breakpoint-down(lg) { 
+                        @include font-size(18px);
+                    }
+                    &:hover {
+                        color: $light-blue;
+                    }
+                }
+            }
+        }
+    }
+    #block-nystatetopnavright {
+        transition: opacity .3s;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 5.5%;
+        margin-top: 22px;
+        .nav {
+            list-style-type: none;
+            padding: 0px;
+            margin-top: 0px;
+            .nav-item{
+                padding: 0 10px;
+                a {
+                    font-family: 'ProximaNovaRegular';
+                    text-decoration: none;
+                    color: $black;
+                    @include font-size(16px);
+                    padding: 10px;
+                    transition: color .25s;
+                    &:hover {
+                        color: #0f739d;
+                    }
+                }
+            }
+        }
+    }
+    .block-universal-search-block {
+        transition: width .33s;
+        text-align: center;
+        display: inline-block;
+        position: absolute;
+        top: 6px;
+        left: auto;
+        right: 275px;
+        width: 140px;
+        vertical-align: baseline;
+        background: none;
+        padding: 0px;
+        margin-top: 15px;
+        z-index: 10;
+        @include media-breakpoint-down(lg) { 
+            right: 245px;
+        }
+        .search-open {
+            width: 100%;
+            min-width: 860px;
+            float: right;
+            @include media-breakpoint-only(lg) { 
+                min-width: 550px;
+            }
+            .submit-search {
+                border-left-width: 1px;
+                width: 85px;
+                padding: .5em 1em;
+            }
+        }
+        .nav-link-search {
+            font-family: "ProximaNovaSemibold";
+            padding: 7px 20px 7px 30px;
+            border: solid 1px #d9e2e2;
+            border-radius: 30px;
+            outline: none;
+            vertical-align: baseline;
+            line-height: 20px;
+            position: relative;
+            width: 100%;
+            transform: width 2.0s;
+        }
+        .ui-helper-hidden-accessible {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+        i {
+            position: relative;
+            top: -27px;
+            left: 10px;
+            color: $dark-gray;
+        }
+        .submit-search {
+            transition: .3s all;
+            background: none;
+            border: 0 solid #d9e2e2;
+            color: #128ec3;
+            padding: .5em 0;
+            position: absolute;
+            right: 1em;
+            top: .35em;
+            width: 0;
+            overflow: hidden;
+            line-height: 1.3em;
+            border-radius: 0;
+        }
+    }
+}
+.cuomo-main-nav {
+    background-color: $blue;
+    @include media-breakpoint-down(md) { 
+        display: none !important;
+        visibility: hidden;
+    }
+    &--mobile {
+        background-color: $blue;
+        display: block;
+        @include media-breakpoint-up(lg) { 
+            display: none !important;
+            visibility: hidden;
+        }
+        .block-cuomo-logo-block {
+            width: 100%;
+            max-width: 250px;
+            text-align: left;
+            padding: 1rem 1rem 0 0;
+            img {
+                float:left;
+                width: 100%;
+                max-width: 150px;
+                padding: 0 0 1rem 0;
+            }
+        }
+        .cuomo-mobile-menu {
+            display:none;
+            &--expanded {
+                min-height: 640px;
+            }
+            .menu--main {
+                padding: 0 1.5rem;
+            }
+            .dropdown-toggle {
+                @extend h3;
+                padding: 1rem 0rem; 
+                letter-spacing: 1px;
+                color: $white;
+                border-bottom: 1px solid $white;
+                &:active,
+                &:focus {
+                    color: $gold;
+                }
+                &:before {
+                    position: relative;
+                    left: 5px;
+                    font-family: 'icomoon';
+                    speak: none;
+                    font-size: rem(24px);
+                    font-style: normal;
+                    font-weight: normal;
+                    font-variant: normal;
+                    text-transform: none;
+                    line-height: 1;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    -webkit-transition: -webkit-transform 0.3s;
+                    -o-transition: -o-transform 0.3s;
+                    transition: -webkit-transform 0.3s;
+                    transition: transform 0.3s;
+                    transition: transform 0.3s, -webkit-transform 0.3s, -o-transform 0.3s;
+                    color: $white;
+                    content: "\e616";
+                    text-align: center;
+                    height: 25px;
+                    border: none;
+                    float: right;
+                }
+                &--rotate {
+                    border-bottom: none;
+                    &:before {
+                        position: relative;
+                        left: 5px;
+                        font-family: 'icomoon';
+                        speak: none;
+                        font-size: rem(24px);
+                        font-style: normal;
+                        font-weight: normal;
+                        font-variant: normal;
+                        text-transform: none;
+                        line-height: 1;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        -webkit-transition: -webkit-transform 0.3s;
+                        -o-transition: -o-transform 0.3s;
+                        transition: -webkit-transform 0.3s;
+                        transition: transform 0.3s;
+                        transition: transform 0.3s, -webkit-transform 0.3s, -o-transform 0.3s;
+                        transform: rotate(180deg);
+                        color: $gold;
+                        content: "\e616";
+                        text-align: center;
+                        height: 25px;
+                        border: none;
+                        float: right;
+                    }  
+                }
+            }
+            // .is-clicked {
+            //     border-bottom: none;
+            //     &:before {
+            //         position: relative;
+            //         left: 5px;
+            //         font-family: 'icomoon';
+            //         speak: none;
+            //         font-size: rem(24px);
+            //         font-style: normal;
+            //         font-weight: normal;
+            //         font-variant: normal;
+            //         text-transform: none;
+            //         line-height: 1;
+            //         -webkit-font-smoothing: antialiased;
+            //         -moz-osx-font-smoothing: grayscale;
+            //         -webkit-transition: -webkit-transform 0.3s;
+            //         -o-transition: -o-transform 0.3s;
+            //         transition: -webkit-transform 0.3s;
+            //         transition: transform 0.3s;
+            //         transition: transform 0.3s, -webkit-transform 0.3s, -o-transform 0.3s;
+            //         transform: rotate(180deg);
+            //         color: $white;
+            //         content: "\e616";
+            //         text-align: center;
+            //         height: 55px;
+            //         border: none;
+            //         float: right;
+            //     }
+            // }
+        }
+        .cuomo-lateral-nav {
+            display:none;
+            padding-bottom: 1.25em;
+            border-bottom: 1px solid rgb(255, 255, 255);
+            li {
+                padding: rem(8px 0px);
+                list-style: none;
+                a {
+                    color: $white;
+                    font-size: 1.5rem;
+                    letter-spacing: 1px;
+                    text-decoration: none;
+                    padding: rem(12px 0);
+                    &:hover {
+                        color: $gold;
+                    }
+                }
+            }
+        }
+        .expand-menu-mobile {
+            /* this span is the central line in the menu menu */
+            display: inline-block;
+            position: absolute;
+            right: 15px;
+            top: 40px;
+            width: 30px;
+            height: 2px;
+            background-color: $gold;
+            
+            /* these are the upper and lower lines in the menu menu */
+            &::before, &:after {
+                content: '';
+                width: 100%;
+                height: 100%; 
+                position: absolute;
+                background-color: inherit;
+                left: 0;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-transition: -webkit-transform 0.3s;
+                -moz-transition: -moz-transform 0.3s;
+                -o-transition: -o-transform 0.3s;
+                transition: transform 0.3s;
+            }
+            
+            &::before {
+                bottom: 10px;
+            }
+
+            &::after {
+                top: 10px;
+            }
+            &--rotate {
+                background-color: rgba(#FFF, 0);
+                &::before, &::after {
+                    background-color: $gold;
+                }
+
+                &::before {
+                    bottom: 0;
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    top: 0;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+    .navbar {
+        padding: 1rem 2rem;
+    }
+    .block-cuomo-logo-block {
+        @include media-breakpoint-down(md) { 
+            right: 0;
+        }
+        img {
+            float:left;
+            width: 100%;
+            max-width: 150px;
+        }
+    }
+    .cuomo-main-nav-menu {
+        @include media-breakpoint-down(md) { 
+            display: none !important;
+            visibility: hidden;
+        }
+        .menu--main {
+            h2 {
+                display: none;
+            }
+        }
+        .navbar-nav {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            /* display: flex; */
+            /* -webkit-box-orient: vertical; */
+            /* -webkit-box-direction: normal; */
+            /* -webkit-flex-direction: column; */
+            -ms-flex-direction: column;
+            flex-direction: row !important;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+            li {
+                font-family: 'UniformBlack-Regular';
+                @include font-size(14px);
+                display: inline;
+                letter-spacing: 0.34px; 
+                line-height: 19px;
+                .nav-link {
+                    width: 100%;
+                    // max-width: 150px;
+                    margin: 0;
+                    float: left;
+                    display: block;
+                    padding: .875rem 1.75rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: $white;
+                    &:hover {
+                        color: $gold;
+                    }
+                    .dropdown-toggle:last-child {
+                        padding: .875rem 0 .875rem 1.75rem;
+                    }
+                } 
+                .nav-item {
+                    width: 100%;
+                    max-width: 150px;
+                    margin: 0;
+                    float: left;
+                    display: block;
+                    padding: .875rem 1.75rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: $white;
+                    &:hover {
+                        color: $gold;
+                    }
+                }
+                // .nav-link:last-child {
+                //     padding:0 !important;
+                // }
+            }
+        }
+    }
+    .cuomo-main-content {
+        /* set a min-height and a z-index to be sure that the main element completely covers the lateral menu */
+        min-height: 100%;
+        position: relative;
+        background-color: $background;
+        z-index: $content-zindex;
+        
+        //we assign a top padding since the header is in position absolute or fixed
+        padding-top: $header-S;
+
+        /* Force Hardware Acceleration in WebKit */
+        -webkit-transform: transformZ(0);
+        -webkit-backface-visibility: hidden;
+
+        @include transition(transform); 
+        @include transition(.4s);
+
+        &.lateral-menu-is-open {
+            -webkit-transform: translateX(-260px);
+            -moz-transform: translateX(-260px);
+            -ms-transform: translateX(-260px);
+            -o-transform: translateX(-260px);
+            transform: translateX(-260px);
+        }
+
+        @include media-breakpoint-down(md) {
+            padding-top: $header-M;
+        }
+    }
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: $header-S;
+        width: 100%;
+        background: $color-1;
+        z-index: $header-zindex;
+
+        /* Force Hardware Acceleration in WebKit */
+        -webkit-transform: transformZ(0);
+        -webkit-backface-visibility: hidden;
+
+        @include transition(transform);
+        @include transition(3s);
+
+        &.lateral-menu-is-open {
+            -webkit-transform: translateX(-260px);
+            -moz-transform: translateX(-260px);
+            -ms-transform: translateX(-260px);
+            -o-transform: translateX(-260px);
+            transform: translateX(-260px);
+        }
+        
+        //assign this class to the header if you want a fixed navigation
+        &.is-fixed {
+            position: fixed;
+        }
+
+        @include media-breakpoint-down(md) {
+            height: $header-M;
+        }
+    }
+    .cuomo-menu-trigger { 
+        .is-clicked {
+            color: $gold !important;
+        }
+        &:last-child {
+            border-left: solid 1px $light-gray;
+            .dropdown-toggle {
+                padding: .875rem 0 .875rem 1.75rem !important;
+            }
+        }
+    }
+    .cuomo-lateral-nav {
+        position: fixed;
+        height: 100%;
+        right: 0;
+        top: 170px;
+        visibility: hidden;
+        /* the secondary navigation is covered by the main element */
+        z-index: 15;
+        width: 720px;
+        padding: rem(50px 0 0 20px);
+        background-color: $dark-blue;
+        overflow-y: auto;
+        /* Force Hardware Acceleration in WebKit */
+        -webkit-transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        -webkit-transition: -webkit-transform .4s 0s, visibility 0s .4s;
+        -moz-transition: -moz-transform .4s 0s, visibility 0s .4s;
+        transition: transform .4s 0s, visibility 0s .4s;
+        /* this creates the subtle slide in animation of the navigation */
+        -webkit-transform: translateX(80px);
+        -moz-transform: translateX(80px);
+        -ms-transform: translateX(80px);
+        -o-transform: translateX(80px);
+        transform: translateX(80px);
+        .cuomo-navigation {
+            margin: 10px 0 16px;
+        }
+        .sub-menu {
+            padding: 0 10px 20px 15px;
+            display: none;
+        }      
+        a {
+            font-family: 'Oswald-book';
+            display: block;
+            padding: rem(0 0 0 60px);
+            font-size: rem(42px);
+            line-height: rem(75px);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: $white;
+            &:hover {
+                text-decoration: none;
+                color: $gold;
+                background-image: url(../images/arrow-gold_right.svg);
+                background-repeat: no-repeat;
+                background-size: 35px 35px;
+                background-position: 1% 50%;
+                // margin: rem(0 0 0 20px);
+                // &:before {
+                //     content: ">";
+                // }
+            }
+        }
+    }
+
+    .no-touch .cuomo-lateral-nav a:hover {
+      color: #FFF;
+    }
+
+    @include media-breakpoint-down(md) {
+      .cuomo-lateral-nav .cd-navigation {
+        margin: 20px 0;
+      }
+    }
+
+    .cuomo-lateral-nav {
+        &.lateral-menu-is-open {
+            -webkit-transform: translateX(0);
+            -moz-transform: translateX(0);
+            -ms-transform: translateX(0);
+            -o-transform: translateX(0);
+            transform: translateX(0);
+            visibility: visible;
+            -webkit-transition: -webkit-transform .4s 0s, visibility 0s 0s;
+            -moz-transition: -moz-transform .4s 0s, visibility 0s 0s;
+            transition: transform .4s 0s, visibility 0s 0s;
+            /* smooth the scrolling on touch devices - webkit browsers */
+            -webkit-overflow-scrolling: touch;
+        }
+        .item-has-children > a {
+            position: relative;
+            text-transform: uppercase;
+            font-weight: 600;
+            /* this is the right arrow to show that the item has a submenu  */
+            &::after {
+                content: '';
+                display: block;
+                height: 11px;
+                width: 8px;
+                position: absolute;
+                top: 50%;
+                bottom: auto;
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                -o-transform: translateY(-50%);
+                transform: translateY(-50%);
+                right: 1em;
+                background: url("../img/cd-arrow.svg") no-repeat center center;
+                background-size: 8px 11px;
+                -webkit-transition-property: -webkit-transform;
+                -moz-transition-property: -moz-transform;
+                transition-property: transform;
+                -webkit-transition-duration: 0.2s;
+                -moz-transition-duration: 0.2s;
+                transition-duration: 0.2s;
+            }
+            &.submenu-open::after {
+                -webkit-transform: translateY(-50%) rotate(90deg);
+                -moz-transform: translateY(-50%) rotate(90deg);
+                -ms-transform: translateY(-50%) rotate(90deg);
+                -o-transform: translateY(-50%) rotate(90deg);
+                transform: translateY(-50%) rotate(90deg);
+            }
+        }
+    }
+}
+#main {
+    &.sticky-nav {
+        margin-top: 80px;
+        &.sticky-subnav {
+            margin-top: 127px
+        }
+    }
+}
+.toolbar-fixed {
+    .cuomo-main-nav {
+        .cuomo-lateral-nav {
+            top: 209px;
+        }
+        &.sticky {
+            .cuomo-lateral-nav {
+                top: 118px;
+            }
+        }
+    }
+    .subnav-wrapper {
+        &.sticky-pad {
+            top: 118px;
+        }
+    }
+    #main {
+        &.sticky-pad {
+            margin-top: 118px;
+            &.sticky-subnav {
+                margin-top: 164px;
+            }
+        }
+    }
+    &.toolbar-horizontal.toolbar-tray-open {
+        .cuomo-main-nav {
+            .cuomo-lateral-nav {
+                top: 251px;
+            }
+            &.sticky {
+                .cuomo-lateral-nav {
+                    top: 160px;
+                }
+            }
+        }
+        .subnav-wrapper {
+            &.sticky-pad {
+                top: 160px;
+            }
+        }
+        #main {
+            &.sticky-pad {
+                margin-top: 161px;
+                &.sticky-subnav {
+                    margin-top: 207px;
+                }
+            }
+        }
+    }
+}

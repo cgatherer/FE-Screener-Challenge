@@ -1,0 +1,56 @@
+/* ------------------ Cuomo Complex Copy ------------------ */
+
+.paragraph--type--simple-copy {
+	.simple-copy {
+		.full-width-img {
+			.field--type-image{
+				margin-bottom: 3rem;
+				img {
+					width: 100%;
+				    height: auto;
+				}
+			}
+		}
+		&--copy {
+			max-width: 935px;
+    		margin: 0 auto;
+		    @include media-breakpoint-down(lg) { 
+		        padding: 0 1rem;
+		    }
+		    @include media-breakpoint-down(md) { 
+		        padding: 0 1rem;
+		    }
+		    @include media-breakpoint-down(sm) { 
+		        padding: 0;
+		    }
+			.title {
+				color: $blue; 
+    			padding: 0 6rem 0 0;
+    			margin-bottom: rem(12px);
+    			@include media-breakpoint-down(sm) { 
+		       		padding: 0;
+		    	}
+			}
+			&.wider {
+				max-width: none;
+			}
+			p, ul {
+				padding: 0 6rem 0 0;
+				margin-bottom: rem(24px); 
+				@include media-breakpoint-down(lg) { 
+    				padding: 0 2rem 0 0; 
+				}
+				@include media-breakpoint-down(md) { 
+			        font-size: .8rem;
+    				padding: 0 2rem 0 0;
+			    }
+				@include media-breakpoint-down(sm) { 
+			        padding: 0;
+			    }
+			}
+			li {
+				margin-left: 1.75rem;
+			}
+		}
+	}
+}

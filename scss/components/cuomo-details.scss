@@ -1,0 +1,39 @@
+/* ------------------ Cuomo Details ------------------ */
+
+.paragraph--type--card-detail {
+    margin-bottom: 1rem;
+	.card-detail-title {
+        @extend .subhead;
+        color: $dark-blue; 
+        border-top: 1px solid $dark-blue;
+        margin: 0 6rem .25rem 0;
+        @include media-breakpoint-down(lg) { 
+            margin: 0 2rem 0 0;
+        }
+        @include media-breakpoint-down(md) { 
+            margin: 0 2rem 1rem 0;
+        }
+        @include media-breakpoint-down(sm) { 
+            margin: 0 0 1rem 0rem;
+        }
+    }
+    .card-detail-copy p {
+        @extend .caption;
+        margin: 0 6rem 1rem 0;
+        @include media-breakpoint-down(lg) { 
+            // margin: 0 2rem 0 0;
+            padding: 0;
+            margin: 0;
+        }
+        @include media-breakpoint-down(md) { 
+            // margin: 0 2rem 1rem 0;
+            padding: 0;
+            margin: 0;
+        }
+        @include media-breakpoint-down(sm) { 
+            // margin: 0 0 1rem 0;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}

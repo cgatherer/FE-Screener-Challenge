@@ -1,0 +1,123 @@
+/* ------------------ Cuomo Article ------------------ */
+
+.node--type-article {
+	.article {
+		&--heading {
+
+			.tags-date {
+				width: 100%;
+				display: flex;
+				.tags {
+					min-width: 45px;
+					&:before {
+						position: absolute;
+						top: 4px;
+						left: 0px;
+						content: "";
+						background: url(../images/arrow-blue.svg) no-repeat;
+						width: 30px;
+						height: 30px;
+					}
+					.field--name-field-tags {
+						margin: 0;
+						float: left;
+						@include media-breakpoint-down(md) {
+							width: 100%;
+						}
+						.links {
+							display: block;
+							margin-left: 50px;
+							li {
+								margin-top: 1px;
+								a {
+									color: $gold;
+									font-family: 'AlternateGotNo2D';
+									font-size: 2.625rem;
+									text-transform: uppercase;
+									margin: 0;
+									line-height: 100%;
+									pointer-events: none;
+									font-weight: 500;
+									@include media-breakpoint-down(lg) {
+										font-size: 1.75rem;
+									}
+									&:hover {
+										text-decoration: none;
+									}
+								}
+								&:after {
+									content: "|";
+									line-height: 100%;
+									font-size: 2.5rem;
+									margin-left: 15px;
+									color: #002d72;
+								}
+								&:last-of-type {
+									&:after {
+										content: "/";
+									}
+								}
+							}
+						}
+					}
+				}
+				.date {
+					@extend h3;
+					float: left;
+					color: $blue;
+					margin-bottom: 0;
+					margin-top: 1px;
+
+				}
+			}
+			.title {
+				color: $dark-blue;
+				font-size: 4rem;
+				font-weight: 400;
+				text-transform: uppercase;
+				line-height: 100%;
+				width: 100%;
+				padding: 0;
+				@include media-breakpoint-down(lg) {
+					font-size: 4rem;
+				}
+				@include media-breakpoint-down(sm) {
+					font-size: 3.5rem
+				}
+			}
+		}
+		&--copy {
+			display: block;
+    		width: 100%;
+            margin: 3rem 0 0 0;
+			.field--type-image {
+				display: flex;
+				float: none;
+				width: 100%;
+                height: auto;
+                margin: 0 auto;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+			}
+			.body {
+				padding: 2rem 6rem 0;
+			    @include media-breakpoint-down(lg) { 
+			        padding: 2.5rem 1.5rem 0;
+			    }
+			    @include media-breakpoint-down(md) { 
+			        padding: 2.5rem 1.5rem 0;
+			    }
+			    @include media-breakpoint-down(sm) { 
+			        padding: 2.5rem 0;
+			    }
+				.field--name-field-paragraphs {
+					margin-top: 4rem;
+				}
+			}
+		}
+	}
+}

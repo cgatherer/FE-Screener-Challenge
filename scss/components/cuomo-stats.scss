@@ -1,0 +1,25 @@
+/* ------------------ Cuomo Stats ------------------ */
+
+.paragraph--type--stat {
+	display: inline-block;
+    width: 100%;
+	.stats-title {
+		&--title {
+			@extend .subhead;
+			border-top: solid 1px $blue;
+			padding: 0;
+			color: $blue;
+	    	margin-bottom: .25rem; 
+		}
+	}
+	.stats-value {
+		&--value {
+			font-family: 'UniformBlack-Regular';
+			color: $blue;
+			font-size: rem(40px);
+			font-weight: 300;
+	    	line-height: rem(40px);
+	    	margin-bottom: rem(24px);
+		}
+	}
+}

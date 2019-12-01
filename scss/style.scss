@@ -1,59 +1,641 @@
-/*!
- * Hibbert Framework - Bootstrap v4.0.0(slim)
- * Copyright 2011-2018 The Bootstrap Authors
- * Copyright 2011-2018 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+/* 
+Theme Name: Bootstrap 4 Sass
+Description: Bootstrap 4 with Sass
+*/
 
- // Font
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+// import files
+@import "import";
 
-// Base Styles
-@import "base/config";
-@import "base/functions";
-@import "base/hibbert-grid";
-@import "base/mixins";
-@import "base/reboot";
-@import "base/type";
-@import "base/utilities";
+/* GENERAL STYLES
+-------------------------------------------------*/
 
-// Components Styles
-@import "components/alert";
-@import "components/badge";
-@import "components/breadcrumb";
-@import "components/button-group";
-@import "components/buttons";
-@import "components/card";
-// @import "components/cards";
-@import "components/carousel";
-@import "components/clipboard-js";
-@import "components/close";
-@import "components/code";
-@import "components/component-examples";
-@import "components/content";
-@import "components/custom";
-@import "components/dropdown";
-@import "components/frames";
-@import "components/forms";
-@import "components/grid";
-@import "components/images";
-@import "components/input-group";
-@import "components/jumbotron";
-@import "components/list-group";
-@import "components/loading-animation";
-@import "components/media";
-@import "components/modal";
-@import "components/nav";
-@import "components/navbar";
-@import "components/pagination";
-@import "components/progress-bar";
-@import "components/popover";
-@import "components/print";
-@import "components/progress";
-@import "components/reboot";
-@import "components/root";
-@import "components/syntax";
-@import "components/tables";
-@import "components/tooltip";
-@import "components/transitions";
-@import "components/video-header";
+body {
+    background: $white;
+}
+
+
+/* COLORS 
+--------------------------------------------------*/
+
+a {
+    color: $accent-shade;
+}
+
+.bg-inverse {
+    background: $primary-shade !important;
+}
+
+.site-footer {
+    background: $accent-shade !important;
+}
+
+.menu--main li a {
+    color: $primary-shade;
+}
+
+.menu--account li a {
+    color: $primary-shade;
+}
+
+.site-name-slogan a {
+    text-decoration: none;
+}
+
+.card-group img {
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+.card-group .field--type-image {
+    margin: 0
+}
+
+.slick {
+    width: 100%;
+}
+
+.slick>div {
+    margin: 0 15px;
+}
+
+.test {
+    margin-top:10px;
+}
+
+/* Global 
+--------------------------------------------------*/
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 16;
+    transition: ease all .5s;
+    .cuomo-lateral-nav {
+        top: 78px;
+    }
+}
+.toolbar-fixed {
+    .sticky {
+        top: 39px;
+    }
+    &.toolbar-horizontal.toolbar-tray-open {
+        .sticky {
+            top: 81px;
+        }
+    }
+}
+
+.sticky-pad {
+    position: fixed;
+    top: 78px;
+    width: 100%;
+    z-index: 15;
+    transition: ease all .5s;
+}
+
+.desktop {
+    display: block;
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+}
+
+.mobile {
+    display: none;
+    @include media-breakpoint-down(sm) {
+        display: block;
+    }
+}
+
+.button-arrow {
+    position: relative;
+    mask-image: url(../images/arrow-double-blue_right.svg);
+    -webkit-mask-image: url(../images/arrow-double-blue_right.svg);
+    -webkit-mask-repeat: no-repeat;
+    font-size: rem(14px);
+    margin: rem(0 0 0 20px);
+}
+
+.button-arrow-blue {
+    &:after {
+        position: absolute;
+        content : "";
+        background : url(../images/arrow-double-blue.svg) no-repeat;
+        width: 10px;
+        height: 10px;
+        padding: rem(8px);
+        margin-top: rem(10px);
+        margin-left: rem(16px);
+        float: right;
+        transform: rotate(180deg);
+    }
+    &:hover {
+        &:after {
+            position: absolute;
+            content : "";
+            background : url(../images/arrow-double-gold.svg) no-repeat;
+            width: 10px;
+            height: 10px;
+            padding: rem(8px);
+            margin-top: rem(10px);
+            margin-left: rem(16px);
+            float: right;
+            transform: rotate(180deg);
+        }
+    }
+}
+button.button-arrow-blue {
+    &:after {
+        margin-top: 0;
+    }
+    &:hover {
+        &:after {
+            margin-top: 0;
+        }
+    }
+}
+
+.button-arrow-white {
+    &:after {
+        position: absolute;
+        content : "";
+        background : url(../images/arrow-double-white.svg) no-repeat;
+        width: 10px;
+        height: 10px;
+        padding: rem(8px);
+        margin-top: rem(10px);
+        margin-left: rem(16px);
+        float: right;
+        transform: rotate(180deg);
+    }
+    &:hover {
+        &:after {
+            position: absolute;
+            content : "";
+            background : url(../images/arrow-double-gold.svg) no-repeat;
+            width: 10px;
+            height: 10px;
+            padding: rem(8px);
+            margin-top: rem(10px);
+            margin-left: rem(16px);
+            float: right;
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.button-arrow-news {
+    position: relative;
+    float: right;
+    height: 15px;
+    width: 15px;
+    background-image: url(../images/arrow-double-blue_right.svg);
+    background-repeat: no-repeat;
+    font-size: rem(14px);
+    margin: rem(5px 0 0 0);
+}
+
+.button-arrow-news-events {
+    position: relative;
+    float: right;
+    height: 12px;
+    width: 12px;
+    background-image: url(../images/arrow-double-blue_right.svg);
+    background-repeat: no-repeat;
+    font-size: rem(14px);
+    margin: rem(3px 0 0 0);
+}
+
+.accordion-arrow {
+    position: relative;
+    background-image: url(../images/arrow-double-blue_down.svg);
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    margin: .5rem 1.25rem 0;
+    float: right;
+    transition: ease all .5s;
+    &--open {
+      transform: rotate(180deg);  
+    }
+}
+
+.large-heading {
+    @extend h1;
+    &--blue {
+        color: $blue !important;
+    }
+    &--white {
+        color: $white !important;
+    }
+}
+
+.small-heading {
+    @extend h2;
+    &--blue {
+        color: $blue !important;
+    }
+    &--white {
+        color: $white !important;
+    }
+}
+
+.dropdown-toggle::after {
+    display: none;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.cuomo-container {
+    width: 100%;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-right: auto;
+    margin-left: auto;
+    @include media-breakpoint-up(sm) { 
+        max-width: 599px;
+    }
+    @include media-breakpoint-up(md) { 
+        max-width: 768px;
+    }
+    @include media-breakpoint-up(lg) { 
+        max-width: 992px;
+    } 
+    @include media-breakpoint-up(xl) { 
+        max-width: 1440px;
+    }
+    .col-sm-12 {
+        padding-right: 0px;
+        padding-left: 0px;
+        .navbar {
+            padding: 1rem 6rem;
+            @include media-breakpoint-down(lg) { 
+                padding: 1rem 1.5rem;
+            }
+            .navbar-toggler {
+                display: none;
+            }
+        }
+    }
+}
+
+.hero-title-container {
+    width: 100%;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-right: auto;
+    margin-left: auto;
+    @include media-breakpoint-up(xl) {
+        max-width: 1440px;
+    }
+    .col {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
+
+.row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.full-width-row {
+    .col-sm-12 {
+        position: relative;
+        width: 100%;
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+}
+
+.node__content {
+    font-size: 1.3rem;
+    margin-top: 0rem;
+}
+
+.field--type-image img, 
+.field--name-field-user-picture img {
+    margin: 0;
+}
+
+.node .field--type-image {
+    float: left;
+    margin: 0;
+}
+.main-content {
+    width: 100%;
+}
+
+.path-_ {
+    .main-content {
+        width: 100%;
+        max-width: 1200px;
+        min-height: 500px;
+        margin: 0 auto;
+    }
+    #block-nnycb-sass-page-title {
+        display: block;
+        .title {
+            padding: 2.5rem 0 0 0;
+            margin-bottom: 1.5rem;
+        }
+    } 
+}
+
+#block-nnycb-sass-page-title {
+    display: none;
+}
+
+.inset-pad {
+    padding: 6rem;
+    @include media-breakpoint-down(lg) { 
+        padding: 1.5rem;
+    }
+    @include media-breakpoint-down(md) { 
+        padding: 1.5rem;
+    }
+    @include media-breakpoint-down(sm) { 
+        padding: 1.5rem;
+    }
+}
+
+.inset-pad-no-top {
+    padding: 0 6rem 6rem;
+    @include media-breakpoint-down(lg) { 
+        padding: 0 1.5rem 1.5rem;
+    }
+    @include media-breakpoint-down(md) { 
+        padding: 0 1.5rem 1.5rem ;
+    }
+    @include media-breakpoint-down(sm) { 
+        padding: 0 1.5rem 1.5rem;
+    }
+}
+
+.inset-pad-no-bottom {
+    padding: 6rem 6rem 0;
+    @include media-breakpoint-down(lg) { 
+        padding: 1.5rem 1.5rem 0;
+    }
+    @include media-breakpoint-down(md) { 
+        padding: 1.5rem 1.5rem 0;
+    }
+    @include media-breakpoint-down(sm) { 
+        padding: 1.5rem 1.5rem 0;
+    }
+}
+
+.inset-pad-sides {
+    padding: 0 6rem;
+    @include media-breakpoint-down(lg) { 
+        padding: 0 1.5rem;
+    }
+    @include media-breakpoint-down(md) { 
+        padding: 0 1.5rem;
+    }
+    @include media-breakpoint-down(sm) { 
+        padding: 0 1.5rem;
+    }
+}
+
+.inset-pad-info-list {
+    padding: 2.5rem 6rem;
+    @include media-breakpoint-down(lg) { 
+        padding: 1.5rem;
+    }
+    @include media-breakpoint-down(md) { 
+        padding: 1.5rem;
+    }
+    @include media-breakpoint-down(sm) { 
+        padding: 1.5rem;
+    }
+}
+
+.inset-pad-no-top-info-list {
+    padding: 0 6rem 2.5rem;
+    @include media-breakpoint-down(lg) { 
+        padding: 0 1.5rem 1.5rem;
+    }
+    @include media-breakpoint-down(md) { 
+        padding: 0 1.5rem 1.5rem ;
+    }
+    @include media-breakpoint-down(sm) { 
+        padding: 0 1.5rem 1.5rem;
+    }
+}
+
+.inset-pad-no-bottom-info-list {
+    padding: 2.5rem 6rem 0;
+    @include media-breakpoint-down(lg) { 
+        padding: 1.5rem 1.5rem 0;
+    }
+    @include media-breakpoint-down(md) { 
+        padding: 1.5rem 1.5rem 0;
+    }
+    @include media-breakpoint-down(sm) { 
+        padding: 1.5rem 1.5rem 0;
+    }
+}
+
+.pad-top-info-list {
+    padding-top: 0rem;
+    @include media-breakpoint-down(lg) { 
+        padding-bottom: 1.5rem;
+    }
+}
+
+.pad-bottom-info-list {
+    padding-bottom: 2rem;
+    @include media-breakpoint-down(lg) { 
+        padding-bottom: 1.5rem;
+    }
+}
+
+.pad-top {
+    padding-top: 6rem;
+    @include media-breakpoint-down(lg) { 
+        padding-top: 3rem;
+    }
+    @include media-breakpoint-down(sm) { 
+        padding-top: 1.5rem;
+    }
+}
+
+.pad-bottom {
+    padding-bottom: 6rem;
+    @include media-breakpoint-down(lg) { 
+        padding-bottom: 3rem;
+    }
+    @include media-breakpoint-down(sm) { 
+        padding-bottom: 1.5rem;
+    }
+}
+
+.pad-left {
+    padding-left: 5rem;
+    @include media-breakpoint-down(lg) { 
+        padding-left: 1.5rem;
+    }
+}
+
+.pad-right {
+    padding-right: 5rem;
+    @include media-breakpoint-down(lg) { 
+        padding-right: 1.5rem;
+    }
+}
+
+.inset-pad-grid-card {
+    padding: 6rem 6rem 0;
+    @include media-breakpoint-down(lg) { 
+        padding: 1.5rem 1.5rem 0;
+    }
+    @include media-breakpoint-down(md) { 
+        padding: 1.5rem 1.5rem 0;
+    }
+    @include media-breakpoint-down(sm) { 
+        padding: 1.5rem 1.5rem 5rem;
+    }
+}
+
+.news-events-inset-pad {
+    padding: 6rem 5rem;
+    @include media-breakpoint-down(lg) { 
+        padding: 1.5rem;
+    }
+    @include media-breakpoint-down(md) { 
+        padding: 1.5rem;
+    }
+    @include media-breakpoint-down(sm) { 
+        padding: 1.5rem;
+    }
+}
+
+.news-events-inset-pad-sides {
+    padding: 0rem 5rem;
+    @include media-breakpoint-down(lg) { 
+        padding: 0 1.5rem;
+    }
+    @include media-breakpoint-down(md) { 
+        padding: 0 1.5rem;
+    }
+    @include media-breakpoint-down(sm) { 
+        padding: 0 1.5rem;
+    }
+}
+
+.para-wrapper {
+    width: 100%;
+}
+
+.paragraph--type--divider {
+    max-width: 1440px;
+    padding: 0 6rem;
+    @include media-breakpoint-down(lg) { 
+        padding: 0 1.5rem;
+    }
+    @include media-breakpoint-down(md) { 
+        padding: 0 1.5rem;
+    }
+    @include media-breakpoint-down(sm) { 
+        padding: 0 1.5rem;
+    }
+    .divider {
+        height: 1px;
+        margin: 2rem 0;
+    }
+}
+
+.views-element-container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.image-caption {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .caption-overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0,45,114,0.6);
+        display: none;
+    }
+    .caption-button {
+        position: relative;
+        float: left;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        background-color: $blue;
+        margin: 2rem 0 0 3rem;
+        @include media-breakpoint-down(sm) {
+            margin: 1rem 0 0 2rem;
+        }
+        color: #ffffff;
+        padding: 5px 0 0 4.5px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        @supports (-ms-ime-align:auto) {
+            padding-top: 3px;
+        }
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            padding-top: 5px;
+            padding-left: 5px;
+            &.open {
+                padding-left: 6.5px;
+            }
+        }
+        &.open {
+            background-color: transparent;
+            border: 1px solid #ffffff;
+            padding-left: 6.5px;
+        }
+    }
+    .caption-content {
+        float: left;
+        width: 100%;
+        position: relative;
+        display: none;
+        .content-inner {
+            padding: 1rem 3rem;
+            color: #ffffff;
+            font-family: 'UniformRegular-Regular';
+            font-size: 1rem;
+            font-weight: 400;
+            text-align: left;
+            line-height: 1.75rem;
+            @include media-breakpoint-down(sm) {
+                padding: 0.5rem 2rem;
+                font-size: 0.8rem;
+                line-height: 1.1rem;
+            }
+        }
+    }
+}

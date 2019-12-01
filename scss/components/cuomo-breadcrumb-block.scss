@@ -1,0 +1,109 @@
+/* ------------------ Cuomo Breadrumb Block ------------------ */
+
+.subnav-wrapper {
+	margin-bottom: 4px;
+	background: #ffffff;
+}
+.subnav-wrapper-inner {
+	width: 100%;
+	border-bottom: solid 1px $dark-gray;
+	box-shadow: 1px 1px 2px 1px rgba($black, 0.15);
+}
+.paragraph--type--block {
+	.field--type-block-field {
+		width: 100%;
+		background-color: $white;
+		overflow: scroll;
+		.block-menu {
+			width: 100%;
+			background-color: $white;
+			padding-top: 1.2rem;
+			padding-bottom: 1.2rem;
+		    @include media-breakpoint-up(md) { 
+				width: rem(1200px);
+		    }
+		    h2 {
+		    	color: $blue;
+		    	font-size: rem(16px);
+		    	font-weight: 300;
+    			text-align: left;
+		    	line-height: 100%;
+		    	padding: rem(0 30px 0 0);
+    			float: left;
+				margin-left: 30px;
+			    border-right: solid 1px darken($dark-gray, 15%);
+		    	@include media-breakpoint-down(lg) { 
+					margin-left: 10px;
+			    }
+			    @include media-breakpoint-down(sm) {
+					position: absolute;
+					background-color: $white;
+			    }
+			    &:before {
+					position: absolute;
+					content : "";
+					background : url(../images/arrow-double-blue.svg) no-repeat;
+					width: 12px;
+    				height: 12px;
+    				margin: 0 0 0 -25px;
+					transform: rotate(180deg);
+					@include media-breakpoint-down(sm) {
+						background : url(../images/arrow-double-blue-breadcrumb.svg) no-repeat;
+						width: 34px;
+    					height: 25px;
+    					margin: -4px 0 0 -34px;
+						background-color: $white;
+						transform: rotate(0deg);
+			    	}
+				}
+		    }
+		    .navbar-nav {
+    			display: flex;
+    			flex-direction: row !important;
+    			padding-left: 0;
+    			margin-bottom: 0;
+    			list-style: none;
+		    	li {
+		    		.nav-link {
+		    			font-family: 'UniformBlack-Regular';
+						color: $blue;
+						font-size: rem(16px);
+		    			font-weight: 300;
+						line-height: 100%;
+    					padding: 0;
+    					margin: 0 1.5rem;
+    					text-transform: uppercase;
+    					&:hover {
+    						color: $gold;
+    					}
+		    		}
+		    	}
+		    	.is-active {
+		    		font-family: 'UniformBlack-Regular';
+					color: $gold;
+					font-size: rem(14px);
+		    		font-weight: 300;
+					line-height: 100%;
+    				padding: 0;
+    				margin: 0 1.5rem 0 3rem;
+    				text-transform: uppercase;
+		    	}
+		    	li {
+		    		.is-active {
+						color: $gold;
+		    		}
+		    	}
+		    }
+		}
+	}
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		.field--type-block-field {
+			overflow: auto;
+		}
+	}
+	@supports (-ms-ime-align:auto) {
+		.field--type-block-field {
+			overflow: auto;
+		}
+	}
+}
