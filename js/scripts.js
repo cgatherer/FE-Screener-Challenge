@@ -38,11 +38,11 @@ jQuery(document).ready(function($){
         var temp = Math.round(data.list[0].main.temp);
         var wind = Math.round(data.list[0].wind.speed);
         return "<div class='weather-forcast'>" +
-               "<div class='weather-forcast--conditions'>weather<br>conditions</div>" +
+               "<div class='weather-forcast--conditions'>weather<br>conditions:<br><h4>" + data.city.name + ", " + data.city.country + "</h4></div>" +
                "<div class='weather-forcast--icon'><img src='https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/" + data.list[0].weather[0].icon + ".png' width='100' height='100' alt='Weather in Tarrytown, US'></div>" +
                "<div class='weather-forcast--temp'><span class='degrees'>" + temp + "° F</span><br><span class='decs'>" + data.list[0].weather[0].main + "</span><br><span class='speed'> " + wind + " MPH Winds</span></div>" +
                "<div class='weather-forcast--tomorrow'><span class='day'>Tomorrow</span><br><span class='degrees'>" + Math.round(data.list[1].main.temp) + "° F</span><br><img src='https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/" + data.list[1].weather[0].icon + ".png' width='45' height='45' alt='Weather in Tarrytown, US'></div>" +
-               "<div class='weather-forcast--day-after'><span class='day'>The Day After</span><br><span class='degrees'>" + Math.round(data.list[2].main.temp) + "° F</span><br><img src='https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/" + data.list[2].weather[0].icon + ".png' width='45' height='45' alt='Weather in Tarrytown, US'></div>" +
+               "<div class='weather-forcast--day-after'><span class='day'>Next</span><br><span class='degrees'>" + Math.round(data.list[2].main.temp) + "° F</span><br><img src='https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/" + data.list[2].weather[0].icon + ".png' width='45' height='45' alt='Weather in Tarrytown, US'></div>" +
                "</div>";
       }
 });
