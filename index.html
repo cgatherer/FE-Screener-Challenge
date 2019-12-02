@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"> 
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+  
+  <!-- Leave the above lines at the top -->
+  <link rel="stylesheet" href="css/style.min.css">
+  
+  <title>FE Screener Challenge</title>
+</head>
+
+<body class="bg-tile">
+  <header role="banner" class="suite-header-bar clearfixshadow-1 is-fixed">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
+      <div class="container">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="https://openweathermap.org/themes/openweathermap/assets/img/openweather-negative-logo-RGB.png">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#home">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#weatherTable">Weather</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home" class="masthead">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12 text-center masthead--content">
+          <h1 class="font-weight-light">Open Weather Map API</h1>
+          <p class="lead">FE Screener Challenge</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main role="main" class="fluid-container">
+    <div class="container bd-content pad-top">
+      <div class="row jumbotron">
+        <!-- Button -->
+        <div class="col-sm-12">
+          <h1>Get Weather</h1>
+          <p class="lead">Click the button to get Weather Information of different Cities.</p>
+          <button type="reset" id="reset" class="btn btn-danger mb-2">Reset</button>
+          <button type="submit" id="submitButton" class="btn btn-primary mb-2">Fetch</button>
+        </div>
+
+      </div>      
+    </div>
+
+    <div class="d-flex justify-content-center loading">
+      <div class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
+    <div class="container bd-content pad-top">
+      <table id="weatherTable" class="table"></table>     
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer inset-pad">
+    <div class="row align-items-center">
+      <div class="col-12 text-center">
+        <span> &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Screener - All Rights Reserved</span> 
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>
