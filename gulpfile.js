@@ -24,7 +24,7 @@ const paths = {
 
 // Compile sass into CSS & auto-inject into browsers
 function styles () {
-  return gulp.src([paths.scss.animate, paths.scss.titatoggle, paths.scss.src])
+  return gulp.src([paths.scss.src])
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([autoprefixer({
