@@ -129,8 +129,186 @@ a {
     }
 }
 
+.navbar-brand {
+    img {
+        width: 100%;
+        max-width: 150px;
+    }
+}
+
+.navbar-dark {
+    background-color: #4e4d4a;
+    border: 0;
+}
+
+.masthead {
+    height: 75vh;
+    min-height: 500px;
+    // background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+    background-image: url('https://source.unsplash.com/pv2ZlDfstXc/1920x1080');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &--content {
+        padding: 25px;
+        color: $white;
+        text-shadow: 2px 2px 2px $black;
+        background: rgba($black, 0.25);
+    }
+}
+
+.jumbotron {
+    .form-inline {
+        .mx-sm-3 {
+            margin-left: 0rem !important;
+        }
+    }
+}
+
 .main-content {
     width: 100%;
+}
+
+// Weather
+.spinner-border {
+    display: none;
+}
+
+.showWeather {
+    @include media-breakpoint-down(sm) {
+        margin: 0 auto;
+    }
+}
+        
+.weather-forcast {
+    display: flex;
+    width: 100%;
+    float: right;
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1rem;
+    @include media-breakpoint-down(lg) {
+        max-width: 375px;
+    }
+    @include media-breakpoint-down(md) {
+        max-width: 340px;
+    }
+    @include media-breakpoint-down(sm) {
+        max-width: 320px;
+    }
+    .degrees {
+        font-size: rem(9px);
+    }
+    &--conditions {
+        font-family: 'UniformBlack-Regular';
+        font-weight: 300;
+        font-size: rem(14px);
+        color: $blue;
+        text-transform: uppercase;
+        padding: 1.5rem 0 0 0;
+        line-height: 100%;
+        @include media-breakpoint-down(lg) {
+            font-size: rem(12px);
+        }
+        @include media-breakpoint-down(sm) {
+            font-size: rem(16px);
+        }
+    }
+    &--icon {
+                height: 80px;
+                padding: 0 1rem;
+                overflow: hidden;
+                img {
+                    position: relative;
+                    top: -10px;
+                    right: 5px;
+                    -webkit-filter: drop-shadow(1px 1px 1px $gray);
+                    filter: drop-shadow(1px 1px 1px $gray);
+                    @include media-breakpoint-down(sm) {
+                        top: 2px;
+                        right: 0px;
+                        width: 75px;
+                        height: 75px;
+                    }
+                }
+    }
+    &--temp {
+                font-family: 'UniformBlack-Regular';
+                font-weight: 300;
+                color: $blue;
+                padding: 0.7rem 1.5rem 0 0;
+                line-height: 100%;
+                border-right: solid 1px $blue;
+                font-size: 1.3rem;
+                min-width: 120px;
+                @include media-breakpoint-down(lg) {
+                    padding: 0.7rem 0 0 0;
+                    border-right: none;
+                }
+                @include media-breakpoint-down(sm) {
+                    padding: 1.5rem 0 0 0;
+                    font-size: rem(16px);
+                }
+                .degrees {
+                    font-size: rem(18px);
+                }
+                .decs {
+                    font-family: 'ProximaNovaRegular';
+                    font-size: 1rem;
+                }
+                .speed {
+                    font-family: 'ProximaNovaRegular';
+                    font-size: 1rem;
+                    @include media-breakpoint-down(sm) {
+                        display: none;
+                    }
+                }
+    }
+    &--tomorrow {
+                font-family: 'UniformBlack-Regular';
+                font-weight: 300;
+                color: $blue;
+                text-align: center;
+                padding: 0 1rem;
+                height: 80px;
+                overflow: hidden;
+                @include media-breakpoint-down(lg) {
+                    display: none;
+                }
+                .day {
+                    font-size: rem(10px);
+                }
+                img {
+                    position: relative;
+                    top: 0px;
+                    right: 0px;
+                    -webkit-filter: drop-shadow(1px 1px 1px $gray);
+                    filter: drop-shadow(1px 1px 1px $gray);
+                }
+    }
+    &--day-after {
+        font-family: 'UniformBlack-Regular';
+        font-weight: 300;
+        color: $blue;
+        text-align: center;
+        padding: 0 1rem;
+        height: 80px;
+        overflow: hidden;
+        border-left: solid 1px $blue;
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+        .day {
+            font-size: rem(10px);
+        }
+        img {
+            position: relative;
+            top: 0px;
+            right: 0px;
+            -webkit-filter: drop-shadow(1px 1px 1px $gray);
+            filter: drop-shadow(1px 1px 1px $gray);
+        }
+    }
 }
 
 .inset-pad {

@@ -1,64 +1,100 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
 <html>
-<!--<![endif]-->
-
-<meta charset="utf-8"> 
+<head>
+  <meta charset="utf-8"> 
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
   
   <!-- Leave the above lines at the top -->
   <link rel="stylesheet" href="css/style.min.css">
-
-  <!-- Scripts -->
-  <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
-  <script src="js/modernizr.js"></script>
-  <script type="text/javascript" src="js/scripts.js"></script>
   
   <title>FE Screener Challenge</title>
 </head>
 
 <body class="bg-tile">
   <header role="banner" class="suite-header-bar clearfixshadow-1 is-fixed">
-    <a id="cms-logo" href="#"><img src="img/Hibbert_logo.svg" alt="Homepage"></a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
+      <div class="container">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="https://openweathermap.org/themes/openweathermap/assets/img/openweather-negative-logo-RGB.png">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Search</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <main role="main" class="fluid-container">
-    <section class="frame-1">
-      <div class="container center clear-center group"> 
-        <h1 class="span12 text-center">Welcome</h1>
-        <h3 class="span12 text-center">Hibbert's Responsive SCSS Boilerplate</h3>
-        <div class="text-center img-center">
-          <button class="btn-primary shadow-hover animated bounceIn img-center">Find out more</button>
-        </div> 
+  <section class="masthead">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12 text-center masthead--content">
+          <h1 class="font-weight-light">Open Weather Map API</h1>
+          <p class="lead">FE Screener Challenge</p>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="container bd-content">
-      <div class="jumbotron">
-        <h1>Page Title</h1>
-        <p class="lead">This example is a page section title.</p>
-        <a class="btn btn-lg btn-primary" href="#" role="button">Learn More &raquo;</a>
+  <main role="main" class="fluid-container">
+    <div class="container bd-content pad-top">
+      <div class="row jumbotron">
+        <div class="col-sm-12 col-md-6">
+          <h1>Search Weather</h1>
+          <p class="lead">Enter the city's zip code to search weather.</p>
+          <!-- Search Form -->
+          <form class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+              <label class="sr-only">Password</label>
+              <input type="zip" class="form-control" id="zipCode" placeholder="Zip Code">
+            </div>
+            <button type="submit" id="submitButton" class="btn btn-primary mb-2">Sumbit</button>
+          </form>
+        </div>
+
+        <div class="col-sm-12 col-md-6">
+          <div class="d-flex justify-content-center loading">
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+          <div class="showWeather"></div>
+        </div>
       </div>      
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="footer-landing">
-    <div> 
-      <span> &copy; 
-        <script type="text/javascript">
-      document.write(new Date().getFullYear());
-        </script> Screener - All Rights Reserved
-      </span> 
+  <footer class="footer inset-pad">
+    <div class="row align-items-center">
+      <div class="col-12 text-center">
+        <span> &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Screener - All Rights Reserved</span> 
+      </div>
     </div>
   </footer>
 
-  <!-- <script src="js/jquery.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script> -->
+  <!-- Scripts -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>
