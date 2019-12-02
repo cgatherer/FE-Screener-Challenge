@@ -12,7 +12,7 @@ const paths = {
     src: './scss/style.scss',
     dest: './css',
     watch: './scss/**/*.scss',
-    fontawesome: './fonts/font-awesome.min.css'
+    fontawesome: './fonts/font-awesome.min.css',
     bootstrap: './node_modules/bootstrap/scss/bootstrap.scss'
   },
   js: {
